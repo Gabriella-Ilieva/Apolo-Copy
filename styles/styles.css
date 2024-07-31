@@ -27,6 +27,7 @@
     --background-color: #ffeadb;
     --placeholder-color: #15252d80;
     --placeholder-color-alt: #ffeadb80;
+    --nebula-light: #365e72;
 }
 
 html{
@@ -50,6 +51,10 @@ body{
 *, :after, :before {
     box-sizing: border-box;
     border: 0 solid #e2e8f0;
+}
+
+a{
+    color: inherit;
 }
 
 .h1, h1 {
@@ -89,6 +94,11 @@ p, .paragraph{
 
 small, .small{
     font-size: clamp(16px,.9375vw,18px);
+    line-height: 1.4;
+}
+
+.extra-small{
+    font-size: clamp(16px,.8333333333vw,16px);
     line-height: 1.4;
 }
 
@@ -1340,6 +1350,72 @@ p.FiraCode{
     font-weight: 500;
 }
 
+/* Single post styles */
+
+.SinglePostMain{
+    --value-1: clamp(70px,4.0625vw,78px);
+    --value-2: clamp(24px,1.6666666667vw,32px);
+    --header-space: calc(var(--value-1) + var(--value-2));
+    padding-top: (var(--header-space));
+}
+
+.SinglePostContentWrapper{
+    position: relative;
+    overflow: visible;
+    --section-play-state: running;
+}
+
+.SinglePostContentWrapper aside{
+    --display: block;
+    display: none;
+    z-index: 3;
+}
+
+.AsideContentWrapper{
+    position: -webkit-sticky;
+    position: sticky;
+    top: calc(clamp(70px, 4.0625vw, 78px) + clamp(24px, 1.6666666667vw, 32px));
+    margin-left: clamp(24px,2.5vw,48px);
+}
+
+.AsideNavigationTitle{
+    margin-bottom: clamp(24px, 1.25vw, 24px);
+}
+
+.AsideNavigationList{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: clamp(24px, 1.25vw, 24px);
+}
+
+.AsideNavigationItem{
+    display: block;
+    background-color: initial;
+    color: inherit;
+    text-decoration: inherit;
+    transition: color 300ms cubic-bezier(0.17,0.17,0,1), margin-bottom 300ms cubic-bezier(0.17,0.17,0,1), opacity 300ms cubic-bezier(0.17,0.17,0,1);
+}
+
+.AsideNavigationItem.Active{
+    text-shadow: .5px 0 0 #000;
+}
+
+.AsideNavigationSocialShare{
+    margin-top: clamp(72px, 3.75vw, 72px);
+}
+
+.SocialShareIcons{
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, .8333333333vw, 16px);
+    margin-top: clamp(24px, 1.25vw, 24px);
+}
+
+.shareIcon svg:hover{
+    color: var(--nebula-light);
+}
+
 @media (hover: hover) and (pointer: fine) {
     .SingleArticleCard:hover {
         -webkit-transform: translateY(-1%);
@@ -1420,6 +1496,19 @@ p.FiraCode{
     .FooterNavigationWrapper{
         justify-content: flex-end;
         align-items: center;
+    }
+
+    .SinglePostContentWrapper{
+        --sitemap-width: calc(clamp(282px, 14.6875vw, 282px) + clamp(24px,2.5vw,48px));
+        --gap: clamp(24px,1.25vw,24px);
+        display: grid;
+        grid-gap: var(--gap);
+        gap: var(--gap);
+        grid-template-columns: var(--sitemap-width) 1fr;
+    }
+
+    .SinglePostContentWrapper aside{
+        display: var(--display, flex) !important;
     }
 }
 
