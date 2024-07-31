@@ -1481,6 +1481,143 @@ p.FiraCode{
     margin: 0 clamp(8px, .4166666667vw, 8px);
 }
 
+.DateWrapper{
+    display: flex;
+    align-items: center;
+    gap: clamp(8px, .8333333333vw, 16px);
+}
+
+.DateWrapper::before{
+    content: "";
+    width: clamp(10px, .5208333333vw, 10px);
+    height: clamp(10px, .5208333333vw, 10px);
+    background-color: var(--color-red);
+    border-radius: 9999px;
+}
+
+.ArticleTitle{
+    margin: clamp(24px, 1.25vw, 24px) 0 clamp(32px, 1.6666666667vw, 32px);
+}
+
+.ArticleAutorWrapper{
+    display: flex;
+    align-items: center;
+    gap: clamp(18px, .9375vw, 18px);
+    padding-bottom: clamp(72px, 3.75vw, 72px);
+    width: -webkit-max-content;
+    width: max-content;
+    text-decoration: none;
+}
+
+.AuthorImgWrapper{
+    border-radius: 9999px;
+    overflow: hidden;
+    position: relative;
+    width: clamp(45px, 3.125vw, 60px);
+    height: clamp(45px, 3.125vw, 60px);
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.AuthorImgWrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.AuthorName{
+    text-underline-offset: 6px;
+}
+
+.ArticleBannerWrapper{
+    padding-top: 25%;
+    margin-bottom: 25%;
+    width: 100%;
+    position: relative;
+    height: 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+.ArticleBanner{
+    position: relative;
+    display: inline-flex;
+    align-items: flex-start;
+}
+
+.ArticleBanner[data-rmiz-wrap=hidden] {
+    visibility: hidden;
+}
+
+.ArticleBanner img{
+    border-radius: clamp(8px,0.4166666667vw,8px);
+}
+
+[data-rmiz-btn-close], 
+[data-rmiz-btn-open]{
+    outline: none;
+    cursor: zoom-in;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    font: inherit;
+    color: inherit;
+    background: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+button[data-rmiz-btn-close] {
+    cursor: zoom-out;
+    outline: none;
+}
+
+button[data-rmiz-btn-open] {
+    cursor: zoom-in;
+    outline: none;
+}
+
+.ArticleBannerModal[data-rmiz-overlay="false"]{
+    display: none;
+}
+
+.ArticleBannerModal[data-rmiz-overlay="true"]{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition-property: background-color; 
+    background-color: rgba(21, 37, 45, 0.9);
+    transition-duration: 300ms;
+    z-index: 2147483647;
+}
+
+.ArticleBannerModalContent[data-rmiz-modal-content="true"]{
+    position: absolute;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    height: 363.281px;
+    left: 404.219px;
+    top: 198.531px;
+    transform: scale(1.75674) translate(4.26927px, 25.2332px);
+    transition-duration: 300ms;
+    width: 726.562px;
+}
+
 @media (hover: hover) and (pointer: fine) {
     .SingleArticleCard:hover {
         -webkit-transform: translateY(-1%);
