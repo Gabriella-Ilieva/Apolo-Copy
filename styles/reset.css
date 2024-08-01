@@ -22,6 +22,7 @@ figure, blockquote, dl, dd {
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
+  padding-left: 0;
 }
 
 /* Set core body defaults */
