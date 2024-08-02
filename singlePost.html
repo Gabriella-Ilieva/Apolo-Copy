@@ -298,6 +298,12 @@
                                             <p class="extra-small">What’s new in Apollo Client 3.10</p>
                                         </li>
                                     </ul>
+                                    <a class="BreadcrumbsMobile" href="#">
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.52539 12.0859H19.0254M19.0254 12.0859L13.0254 6.08594M19.0254 12.0859L13.0254 18.0859" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <span class="small">Back to Blog</span>
+                                    </a>
                                 </div>
                                 <span class="DateWrapper small">April 25, 2024</span>
                                 <h2 class="ArticleTitle">What’s new in Apollo Client 3.10</h2>
@@ -318,86 +324,86 @@
                         </div>
                     </div>
                 </section>
-            </article>
-        </section>
-        <section class="ArticleMainContent">
-            <div class="ArticleMainContentContainer">
-                <div class="ArticleMainContentWrapper">
-                    <p class="small">Apollo Client 3.10 has just been released, and we want to provide you with an overview of what’s new:</p>
-                    <ul class="main-content_list__vhhM5">
-                        <li><small>Introducing new experimental schema-based testing utilities</small></li>
-                        <li><small>New API: <code>client.watchFragment</code></small></li>
-                        <li><small><code>createQueryPreloader</code> reaches “stable” status</small></li>
-                    </ul>
-                    <p class="small">Let’s take a look:</p>
-                    <h4 class="ArticleSubtitle">
-                        <a aria-hidden="true" class="SubtitleLink" href="#">
-                            <svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16">
-                                <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
-                            </svg>
-                        </a>
-                        Introducing new experimental schema-based testing utilities
-                    </h4>
-                    <p class="small">In Apollo Client 3.10, we are introducing new schema-based testing utilities under the <code>@apollo/client/testing/experimental</code> import.</p>
-                    <p class="small">This adds two new tools:</p>
-                    <p class="small"><strong><code>createTestSchema</code></strong> allows you to enhance a <code>GraphQLSchema</code> class with mock scalars and mock resolvers.&nbsp;</p>
-                    <p class="small">You can modify the resolvers inside your tests to simulate changing results.</p>
-                    <p class="small">This approach is an alternative to the current testing approach with <code>MockProvider</code>, allowing you to write tests similar to how you would implement your backend – applying skills you already have and can use in other situations.</p>
-                    <p class="small">You can then use this schema with 
-                        <a data-type="link" href="#">Mock Service Worker</a> 
-                        to simulate a GraphQL server, or you can use our new 
-                        <strong><code>createSchemaFetch</code></strong> 
-                        function to create a <code>fetch</code> function to be used inside of your tests.
-                    </p>
-                    <p class="small text_text__zyGno">Both of these approaches allow you to use your real link chain instead of a mocked one.</p>
-                    <p class="small text_text__zyGno">You can read more on this testing approach in 
-                        <a data-type="link" href="#">the schema-driven testing RFC</a> 
-                        and 
-                        <a data-type="link" href="#">the documentation</a>
-                        .
-                    </p>
-                    <h4 class="ArticleSubtitle">
-                        <a aria-hidden="true" class="SubtitleLink" href="#">
-                            <svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16">
-                                <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
-                            </svg>
-                        </a>
-                        New API: <code>client.watchFragment</code>
-                    </h2>
-                    <p class="small">We also add a new function to the <code>ApolloClient</code> class: <code>watchFragment</code>.</p>
-                    <p class="small">This function enables the functionality of the <code>useFragment</code> hook to be used in Vanilla JavaScript or other frameworks.&nbsp;</p>
-                    <p class="small">A PR to add a <code>watchFragment</code> functionality to <code>apollo-angular</code> has already been opened, and more will follow soon!</p>
-                    <h4 class="ArticleSubtitle">
-                        <a aria-hidden="true" class="SubtitleLink" href="#">
-                            <svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16">
-                                <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
-                            </svg>
-                        </a><code>createQueryPreloader</code> reaches “stable” status
-                    </h2>
-                    <p class="small">In Apollo Client 3.9, we introduced the <code>createQueryPreloader</code> API as “alpha”, and since we’ve heard your positive feedback, with 3.10, we’re releasing it as “stable.”</p>
-                    <p class="small"><code>createQueryPreloader</code> is used to start a query outside of React (e.g. in a Router action) and then later attach to the generated <code>queryRef</code> with the <code>useReadQuery</code> hook.</p>
-                    <p class="small text_text__zyGno">You can read more about it in the <a data-type="link" href="#">documentation</a>.</p>
-                    <div class="AuthorInfo">
-                        <div class="AuthorInfoCard">
-                            <div class="AuthorInfoCardWrapper">
-                                <p>Written by</p>
-                                <div class="AuthorDataWrapper">
-                                    <div class="AuthorImgWrapper">
-                                        <img alt="Lenz Weber-Tronic" loading="lazy" decoding="async" data-nimg="1" src="assets/author-img-article.jpeg">
-                                    </div>
-                                    <h5 class="AuthorName">Lenz Weber-Tronic</h5>
-                                </div>
-                                <a class="AuthorReadMore paragraph" href="#">
-                                    <span>Read more by <!-- -->Lenz Weber-Tronic</span>
-                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6.52539 12.0859H19.0254M19.0254 12.0859L13.0254 6.08594M19.0254 12.0859L13.0254 18.0859" stroke="#15252D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <section class="ArticleMainContent">
+                    <div class="ArticleMainContentContainer">
+                        <div class="ArticleMainContentWrapper">
+                            <p class="small">Apollo Client 3.10 has just been released, and we want to provide you with an overview of what’s new:</p>
+                            <ul class="main-content_list__vhhM5">
+                                <li><small>Introducing new experimental schema-based testing utilities</small></li>
+                                <li><small>New API: <code>client.watchFragment</code></small></li>
+                                <li><small><code>createQueryPreloader</code> reaches “stable” status</small></li>
+                            </ul>
+                            <p class="small">Let’s take a look:</p>
+                            <h4 class="ArticleSubtitle">
+                                <a aria-hidden="true" class="SubtitleLink" href="#">
+                                    <svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+                                        <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
                                     </svg>
                                 </a>
+                                Introducing new experimental schema-based testing utilities
+                            </h4>
+                            <p class="small">In Apollo Client 3.10, we are introducing new schema-based testing utilities under the <code>@apollo/client/testing/experimental</code> import.</p>
+                            <p class="small">This adds two new tools:</p>
+                            <p class="small"><strong><code>createTestSchema</code></strong> allows you to enhance a <code>GraphQLSchema</code> class with mock scalars and mock resolvers.&nbsp;</p>
+                            <p class="small">You can modify the resolvers inside your tests to simulate changing results.</p>
+                            <p class="small">This approach is an alternative to the current testing approach with <code>MockProvider</code>, allowing you to write tests similar to how you would implement your backend – applying skills you already have and can use in other situations.</p>
+                            <p class="small">You can then use this schema with 
+                                <a data-type="link" href="#">Mock Service Worker</a> 
+                                to simulate a GraphQL server, or you can use our new 
+                                <strong><code>createSchemaFetch</code></strong> 
+                                function to create a <code>fetch</code> function to be used inside of your tests.
+                            </p>
+                            <p class="small text_text__zyGno">Both of these approaches allow you to use your real link chain instead of a mocked one.</p>
+                            <p class="small text_text__zyGno">You can read more on this testing approach in 
+                                <a data-type="link" href="#">the schema-driven testing RFC</a> 
+                                and 
+                                <a data-type="link" href="#">the documentation</a>
+                                .
+                            </p>
+                            <h4 class="ArticleSubtitle">
+                                <a aria-hidden="true" class="SubtitleLink" href="#">
+                                    <svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+                                        <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                                    </svg>
+                                </a>
+                                New API: <code>client.watchFragment</code>
+                            </h2>
+                            <p class="small">We also add a new function to the <code>ApolloClient</code> class: <code>watchFragment</code>.</p>
+                            <p class="small">This function enables the functionality of the <code>useFragment</code> hook to be used in Vanilla JavaScript or other frameworks.&nbsp;</p>
+                            <p class="small">A PR to add a <code>watchFragment</code> functionality to <code>apollo-angular</code> has already been opened, and more will follow soon!</p>
+                            <h4 class="ArticleSubtitle">
+                                <a aria-hidden="true" class="SubtitleLink" href="#">
+                                    <svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+                                        <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                                    </svg>
+                                </a><code>createQueryPreloader</code> reaches “stable” status
+                            </h2>
+                            <p class="small">In Apollo Client 3.9, we introduced the <code>createQueryPreloader</code> API as “alpha”, and since we’ve heard your positive feedback, with 3.10, we’re releasing it as “stable.”</p>
+                            <p class="small"><code>createQueryPreloader</code> is used to start a query outside of React (e.g. in a Router action) and then later attach to the generated <code>queryRef</code> with the <code>useReadQuery</code> hook.</p>
+                            <p class="small text_text__zyGno">You can read more about it in the <a data-type="link" href="#">documentation</a>.</p>
+                            <div class="AuthorInfo">
+                                <div class="AuthorInfoCard">
+                                    <div class="AuthorInfoCardWrapper">
+                                        <p>Written by</p>
+                                        <div class="AuthorDataWrapper">
+                                            <div class="AuthorImgWrapper">
+                                                <img alt="Lenz Weber-Tronic" loading="lazy" decoding="async" data-nimg="1" src="assets/author-img-article.jpeg">
+                                            </div>
+                                            <h5 class="AuthorName">Lenz Weber-Tronic</h5>
+                                        </div>
+                                        <a class="AuthorReadMore paragraph" href="#">
+                                            <span>Read more by <!-- -->Lenz Weber-Tronic</span>
+                                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6.52539 12.0859H19.0254M19.0254 12.0859L13.0254 6.08594M19.0254 12.0859L13.0254 18.0859" stroke="#15252D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </section>
+            </article>
         </section>
     </main>
     <footer class="Section">
