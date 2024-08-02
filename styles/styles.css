@@ -1696,7 +1696,6 @@ button[data-rmiz-btn-open] {
     visibility: hidden;
     color: var(--color);
     transition: color 300ms cubic-bezier(0.17,0.17,0,1), opacity 300ms cubic-bezier(0.17,0.17,0,1);
-    opacity: var(--opacity);
 }
 
 .ArticleSubtitle:hover .SubtitleLink{
@@ -1710,6 +1709,69 @@ button[data-rmiz-btn-open] {
 
 .ArticleMainContentWrapper p a{
     text-decoration: underline;
+}
+
+.AuthorInfo{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(56px, 2.9166666667vw, 56px);
+}
+
+.AuthorInfoCard{
+    max-width: clamp(600px,46.875vw,900px);
+    margin: auto;
+    width: 100%;
+}
+
+.AuthorInfoCardWrapper{
+    overflow: hidden;
+    padding: clamp(32px, 1.875vw, 36px) clamp(32px, 2.6041666667vw, 50px);
+    color: var(--color);
+    border-color: var(--color);
+    background-color: var(--color-grey-light);
+    border-radius: clamp(32px,1.6666666667vw,32px);
+}
+
+.AuthorDataWrapper{
+    display: flex;
+    align-items: center;
+    gap: clamp(18px, .9375vw, 18px);
+    margin-top: clamp(16px, 1.6666666667vw, 32px);
+    margin-bottom: clamp(32px, 1.6666666667vw, 32px);
+    padding-bottom: clamp(32px, 1.6666666667vw, 32px);
+    position: relative;
+}
+
+.AuthorDataWrapper::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + clamp(32px, 2.6041666667vw, 50px)* 2);
+    bottom: 0;
+    left: calc(clamp(32px, 2.6041666667vw, 50px)* -1);
+    border-bottom: 1px dashed var(--color);
+    opacity: .3;
+}
+
+.AuthorDataWrapper .AuthorImgWrapper{
+    width: clamp(48px, 4.4791666667vw, 86px);
+    height: clamp(48px, 4.4791666667vw, 86px);
+}
+
+.AuthorDataWrapper .AuthorName{
+    font-weight: 400;
+}
+
+.AuthorReadMore{
+    color: var(--color);
+    font-weight: 500;
+    transition: color 300ms cubic-bezier(0.17,0.17,0,1), opacity 300ms cubic-bezier(0.17,0.17,0,1);
+    display: flex;
+    align-items: center;
+    gap: clamp(6px, .3125vw, 6px);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    text-decoration: none;
 }
 
 @media (hover: hover) and (pointer: fine) {
