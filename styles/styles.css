@@ -100,6 +100,13 @@ p, .paragraph{
     line-height: 1.36;
 }
 
+code{
+    font-family: var(--fira-code-font), monospace;
+    font-size: 1em;
+    font-weight: 400;
+    color: inherit;
+}
+
 small, .small{
     font-size: clamp(16px,.9375vw,18px);
     line-height: 1.4;
@@ -1622,6 +1629,87 @@ button[data-rmiz-btn-open] {
     transition-property: transform, -webkit-transform;
     -webkit-transform-origin: center center;
     transform-origin: center center;
+}
+
+.ArticleMainContent{
+    position: relative;
+    overflow: hidden;
+    background-color: var(--background-color);
+}
+
+.ArticleMainContentContainer{
+    width: 100%;
+    margin: auto;
+    position: relative;
+    padding: 0 clamp(24px,2.5vw,48px);
+    max-width: 1920px;
+}
+
+.ArticleMainContentWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(12px, 1.5625vw, 30px);
+    max-width: clamp(600px,46.875vw,900px);
+    margin: auto;
+    padding-top: clamp(72px, 3.75vw, 72px);
+}
+
+.ArticleMainContentWrapper p{
+    line-height: 1.5;
+}
+
+.ArticleMainContentWrapper ul{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, .8333333333vw, 16px);
+}
+
+.ArticleMainContentWrapper ul li{
+    position: relative;
+    padding-left: clamp(36px, 2.0833333333vw, 40px);
+}
+
+.ArticleMainContentWrapper ul li::before{
+    content: "";
+    width: clamp(10px, .5208333333vw, 10px);
+    height: clamp(10px, .5208333333vw, 10px);
+    background-color: var(--color-red);
+    border-radius: 9999px;
+    position: absolute;
+    top: clamp(7px, .3645833333vw, 7px);
+    left: 0;
+}
+
+.ArticleSubtitle{
+    position: relative;
+    font-weight: 600;
+    text-wrap: unset;
+}
+
+.SubtitleLink{
+    position: absolute;
+    left: -24px;
+    width: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    color: var(--color);
+    transition: color 300ms cubic-bezier(0.17,0.17,0,1), opacity 300ms cubic-bezier(0.17,0.17,0,1);
+    opacity: var(--opacity);
+}
+
+.ArticleSubtitle:hover .SubtitleLink{
+    visibility: visible;
+}
+
+.SubtitleLink:hover{
+    color: var(--color-light);
+    opacity: 0.5;
+}
+
+.ArticleMainContentWrapper p a{
+    text-decoration: underline;
 }
 
 @media (hover: hover) and (pointer: fine) {
