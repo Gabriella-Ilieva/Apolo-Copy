@@ -273,7 +273,7 @@ div#Fake{
 }
 
 
-.NavigationList{
+.NavigationList[role='list']{
     display: grid;
     align-items: center;
     grid-template-columns: repeat(5, auto);
@@ -1543,10 +1543,17 @@ p.FiraCode{
     position: relative;
     display: inline-flex;
     align-items: flex-start;
+    transition-property: visibility;
 }
 
 .ArticleBanner[data-rmiz-wrap=hidden] {
+    transition-delay: 0ms;
     visibility: hidden;
+}
+
+.ArticleBanner[data-rmiz-wrap=visible] {
+    transition-delay: 300ms;
+    visibility: visible;
 }
 
 .ArticleBanner img{
@@ -1585,11 +1592,7 @@ button[data-rmiz-btn-open] {
     outline: none;
 }
 
-.ArticleBannerModal[data-rmiz-overlay="false"]{
-    display: none;
-}
-
-.ArticleBannerModal[data-rmiz-overlay="true"]{
+.ArticleBannerModal[data-rmiz-overlay]{
     position: fixed;
     top: 0;
     right: 0;
@@ -1597,25 +1600,28 @@ button[data-rmiz-btn-open] {
     left: 0;
     width: 100%;
     height: 100%;
-    transition-property: background-color; 
-    background-color: rgba(21, 37, 45, 0.9);
-    transition-duration: 300ms;
-    z-index: 2147483647;
+    visibility: hidden;
+    transition-property: background-color, z-index, visibility;
+    transition-duration: 300ms, 300ms, 0ms;
 }
 
-.ArticleBannerModalContent[data-rmiz-modal-content="true"]{
+.ArticleBannerModal[data-rmiz-overlay="true"]{
+    visibility: visible;
+    background-color: rgba(21, 37, 45, 0.9);
+    z-index: 99999;
+}
+
+.ArticleBannerModal[data-rmiz-overlay="false"]{
+    visibility: hidden;
+    transition-delay: 0ms, 0ms, 300ms;
+}
+
+
+.ArticleBannerModalContent[data-rmiz-modal-content]{
     position: absolute;
-    transition-property: -webkit-transform;
-    transition-property: transform;
     transition-property: transform, -webkit-transform;
     -webkit-transform-origin: center center;
     transform-origin: center center;
-    height: 363.281px;
-    left: 404.219px;
-    top: 198.531px;
-    transform: scale(1.75674) translate(4.26927px, 25.2332px);
-    transition-duration: 300ms;
-    width: 726.562px;
 }
 
 @media (hover: hover) and (pointer: fine) {
