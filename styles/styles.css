@@ -1793,11 +1793,11 @@ button[data-rmiz-btn-open] {
     text-decoration: none;
 }
 
-.ReccomendedArticles{
+.RecommendedArticles{
     padding: clamp(112px, 11.6666666667vw, 224px) 0;
 }
 
-.ReccomendedArticlesWrapper{
+.RecommendedArticlesWrapper{
     padding: clamp(56px, 3.75vw, 72px) 0;
     overflow: hidden;
     color: var(--background-color);
@@ -1806,7 +1806,7 @@ button[data-rmiz-btn-open] {
     border-radius: clamp(32px,1.6666666667vw,32px);
 }
 
-.ReccomendedArticlesContent{
+.RecommendedArticlesContent{
     width: 100%;
     margin: auto;
     position: relative;
@@ -1814,11 +1814,11 @@ button[data-rmiz-btn-open] {
     max-width: 1920px;
 }
 
-.ReccomendedArticlesContent .ArticleAuthor{
+.RecommendedArticlesContent .ArticleAuthor{
     margin: clamp(24px, 1.6666666667vw, 32px);
 }
 
-.ReccomendedArticlesTitle{
+.RecommendedArticlesTitle{
     max-width: clamp(800px, 75vw, 1440px);
     margin-bottom: clamp(32px, 2.9166666667vw, 56px);
 }
@@ -2139,7 +2139,7 @@ button[data-rmiz-btn-open] {
         line-height: 1.33;
     }
 
-    .ReccomendedArticles .GridArticlesWrapper{
+    .RecommendedArticles .GridArticlesWrapper{
         grid-template-columns: repeat(3, 90%);
         grid-gap: clamp(12px, 2.5vw, 48px);
         cursor: grab;
