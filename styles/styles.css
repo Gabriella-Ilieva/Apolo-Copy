@@ -1372,9 +1372,7 @@ p.FiraCode{
 }
 
 .SinglePostContentWrapper{
-    position: relative;
     overflow: visible;
-    --section-play-state: running;
 }
 
 .SinglePostContentWrapper aside{
@@ -1486,6 +1484,23 @@ p.FiraCode{
 
 .Separator{
     margin: 0 clamp(8px, .4166666667vw, 8px);
+}
+
+.BreadcrumbsMobile{
+    display: none;
+    align-items: center;
+    gap: clamp(8px, .4166666667vw, 8px);
+    color: var(--color);
+    transition: color 300ms cubic-bezier(0.17,0.17,0,1), opacity 300ms cubic-bezier(0.17,0.17,0,1);
+    text-decoration: none;
+}
+
+.BreadcrumbsMobile svg{
+    width: clamp(23px, 1.1979166667vw, 23px);
+    height: clamp(23px, 1.1979166667vw, 23px);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    color: var(--color);
 }
 
 .DateWrapper{
@@ -1632,8 +1647,6 @@ button[data-rmiz-btn-open] {
 }
 
 .ArticleMainContent{
-    position: relative;
-    overflow: hidden;
     background-color: var(--background-color);
 }
 
@@ -1772,6 +1785,68 @@ button[data-rmiz-btn-open] {
     width: -moz-fit-content;
     width: fit-content;
     text-decoration: none;
+}
+
+.ReccomendedArticles{
+    padding: clamp(112px, 11.6666666667vw, 224px) 0;
+}
+
+.ReccomendedArticlesWrapper{
+    padding: clamp(56px, 3.75vw, 72px) 0;
+    overflow: hidden;
+    color: var(--background-color);
+    border-color: var(--background-color);
+    background-color: var(--color);
+    border-radius: clamp(32px,1.6666666667vw,32px);
+}
+
+.ReccomendedArticlesContent{
+    width: 100%;
+    margin: auto;
+    position: relative;
+    padding: 0 clamp(24px,2.5vw,48px);
+    max-width: 1920px;
+}
+
+.ReccomendedArticlesContent .ArticleAuthor{
+    margin: clamp(24px, 1.6666666667vw, 32px);
+}
+
+.ReccomendedArticlesTitle{
+    max-width: clamp(800px, 75vw, 1440px);
+    margin-bottom: clamp(32px, 2.9166666667vw, 56px);
+}
+
+.SliderDots{
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 2px;
+    padding-top: clamp(24px, 1.25vw, 24px);
+}
+
+.SliderSingleDot{
+    height: clamp(20px, 1.0416666667vw, 20px);
+    width: clamp(20px, 1.0416666667vw, 20px);
+    padding: clamp(10px, .5208333333vw, 10px);
+    box-sizing: initial;
+    display: flex;
+    border-radius: 9999px;
+    transition: 300ms cubic-bezier(0.23,0.4,0.53,0.88);
+    opacity: .2;
+}
+
+.SliderSingleDot.ActiveDot{
+    opacity: 1;
+}
+
+.SliderSingleDot span{
+    width: 100%;
+    height: 100%;
+    border-radius: 9999px;
+    background-color: var(--color-grey-light);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -2039,9 +2114,37 @@ button[data-rmiz-btn-open] {
         height: clamp(70px, 4.84375vw, 93px) !important;
     }
 
+    .BreadcrumbsMobile{
+        display: flex;
+    }
+
     .ArchiveSinglePost  .ArticleLink{
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .ArticleMainContentWrapper{
+        gap: clamp(24px, 3.75vw, 72px);
+    }
+
+    .ArticleSubtitle{
+        font-size: clamp(24px, 1.25vw, 24px);
+        font-weight: 500;
+        line-height: 1.33;
+    }
+
+    .ReccomendedArticles .GridArticlesWrapper{
+        grid-template-columns: repeat(3, 90%);
+        grid-gap: clamp(12px, 2.5vw, 48px);
+        cursor: grab;
+        transition-property: left;
+        will-change: left;
+        transition-duration: 500ms;
+        transform: translate3d(55px, 0px, 0px);
+    }
+
+    .SliderDots{
+        display: flex;
     }
 }
 
