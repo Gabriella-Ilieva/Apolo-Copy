@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home page</title>
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="vendors/bootstrap-5.3.3-dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header class="HeaderSection">
+            <nav class="HeaderNavigation d-flex align-items-center justify-content-between w-100">
+                <div class="HeaderLeft">
+                    <div class="HeaderLogoWrapper position-relative">
+                        <a href="#" class="HeaderLogoLink">
+                            <svg
+                                viewBox="0 0 78 78"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="AnimatedHeaderLogo">
+                                <path
+                                    d="M39 77.5C60.263 77.5 77.5 60.263 77.5 39C77.5 17.737 60.263 0.5 39 0.5C17.737 0.5 0.5 17.737 0.5 39C0.5 60.263 17.737 77.5 39 77.5Z"
+                                    fill="transparent"
+                                    stroke="var(--color)">
+                                </path>
+                                <path
+                                    d="M50.6771 46.4275L49.4452 42.9266L47.8229 38.3168L46.6494 34.9807L45.113 30.6146L43.3283 25.5435H34.6718L33.2901 29.4703L32.0582 32.9712L25.9397 50.3582H31.6489L33.4399 45.2831H42.098L40.5616 40.917H34.9699L36.1435 37.5809L38.5949 30.6146L39.0001 29.4616L39.4053 30.6146L46.3496 50.3543L46.3512 50.3582H52.0604L50.6771 46.4275Z"
+                                    fill="var(--color)">
+                                </path>
+                                <path
+                                    d="M61.5744 26.2968C63.7606 30.1732 64.906 34.5496 64.899 39C64.899 53.3034 53.3036 64.8989 39.0002 64.8989C24.6968 64.8989 13.1013 53.3034 13.1013 39C13.1013 24.6966 24.6968 13.1012 39.0002 13.1012C43.6465 13.0938 48.2085 14.3425 52.2034 16.7151"
+                                    stroke="var(--color)"
+                                    stroke-width="2.20228"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round">
+                                </path>
+                            </svg>
+                            <div class="LogoDotWrapper">
+                                <span class="LogoDot"></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="NavigationListWrapper">
+                        <div class="position-relative">
+                            <ul data-orientation="horizontal"
+                                class="NavigationList"
+                                role="list">
+                                <li class="NavigationItem">
+                                    <a id="FirstDropDownBtn" class="DropDownBtn" data-state="closed"
+                                        aria-expanded="false" aria-controls="FirstItem"
+                                        data-radix-collection-item="">Product
+                                        <svg width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="DropDownArrow">
+                                            <path
+                                                d="M12 6v12.5m0 0 6-6m-6 6-6-6"
+                                                stroke="currentColor"
+                                                stroke-width="1.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <div id="FirstItem"
+                                        aria-labelledby="FirstDropDownBtn"
+                                        class="DropDownContent"
+                                        data-state="closed"
+                                        aria-labelledby="FirstDropDownBtn">
+                                        <a class="DropDownItem" href="#">GraphOS</a>
+                                        <a class="DropDownItem" href="#">Apollo Federation</a>
+                                        <a class="DropDownItem" href="#">Apollo Client</a>
+                                        <a class="DropDownItem" href="#">Apollo Server</a>
+                                    </div>
+                                </li>
+                                <li class="NavigationItem">
+                                    <a class="DropDownBtn" data-active="false" href="#">Pricing</a>
+                                </li>
+                                <li class="NavigationItem">
+                                    <a id="SecondDropDownBtn"
+                                        class="DropDownBtn"
+                                        data-state="closed"
+                                        aria-expanded="false"
+                                        aria-controls="SecondItem"
+                                        data-radix-collection-item="">
+                                        Developers
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="DropDownArrow">
+                                            <path d="M12 6v12.5m0 0 6-6m-6 6-6-6"
+                                                stroke="currentColor"
+                                                stroke-width="1.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <div id="SecondItem"
+                                        class="DropDownContent"
+                                        data-state="closed"
+                                        aria-labelledby="FirstDropDownBtn">
+                                        <a href="#">Apollo Federation</a>
+                                        <a href="#">GraphOS</a>
+                                        <a href="#">GraphOS</a>
+                                        <a href="#">GraphOS</a>
+                                    </div>
+                                </li>
+                                <li class="NavigationItem">
+                                    <a id="ThirdDropDownBtn" class="DropDownBtn" data-state="closed"
+                                        aria-expanded="false" aria-controls="ThirdItem"
+                                        data-radix-collection-item="">Enterprise
+                                        <svg width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="DropDownArrow">
+                                            <path
+                                                d="M12 6v12.5m0 0 6-6m-6 6-6-6"
+                                                stroke="currentColor"
+                                                stroke-width="1.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                    <div id="ThirdItem" class="DropDownContent" data-state="closed" aria-labelledby="FirstDropDownBtn">
+                                        <a href="#">GraphOS</a>
+                                        <a href="#">GraphOS</a>
+                                        <a href="#">GraphOS</a>
+                                        <a href="#">GraphOS</a>
+                                    </div>
+                                </li>
+                                <li class="NavigationItem">
+                                    <a id="FourthDropDownBtn" class="DropDownBtn" data-state="closed"
+                                        aria-expanded="false" aria-controls="FourthItem"
+                                        data-radix-collection-item=""> Company
+                                        <svg width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="DropDownArrow">
+                                            <path
+                                                d="M12 6v12.5m0 0 6-6m-6 6-6-6"
+                                                stroke="currentColor"
+                                                stroke-width="1.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <div id="FourthItem" class="DropDownContent" data-state="closed" aria-labelledby="FirstDropDownBtn">
+                                        <a href="#">GraphOS</a>
+                                        <a href="#">GraphOS</a>
+                                        <a href="#">GraphOS</a>
+                                        <a href="#">GraphOS</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="HeaderRight">
+                    <button type="button" class="MobileBurgerButton MainBtn MobileNavBtn" data-state="closed" aria-expanded="false" aria-controls="MobileMenu">Menu</button>
+                    <div class="NavigationRightWrapper">
+                        <div class="SearchBtnWrapper"
+                            aria-expanded="false"
+                            aria-haspopup="listbox">
+                            <a class="SearchBtn">
+                                <div class="SearchBtnIcon">
+                                    <svg
+                                        class="SearchIcon"
+                                        viewBox="0 0 24 24"
+                                        width="20"
+                                        height="20"
+                                        fill="currentColor">
+                                        <path d="M16.041 15.856c-0.034 0.026-0.067 0.055-0.099 0.087s-0.060 0.064-0.087 0.099c-1.258 1.213-2.969 1.958-4.855 1.958-1.933 0-3.682-0.782-4.95-2.050s-2.050-3.017-2.050-4.95 0.782-3.682 2.050-4.95 3.017-2.050 4.95-2.050 3.682 0.782 4.95 2.050 2.050 3.017 2.050 4.95c0 1.886-0.745 3.597-1.959 4.856zM21.707 20.293l-3.675-3.675c1.231-1.54 1.968-3.493 1.968-5.618 0-2.485-1.008-4.736-2.636-6.364s-3.879-2.636-6.364-2.636-4.736 1.008-6.364 2.636-2.636 3.879-2.636 6.364 1.008 4.736 2.636 6.364 3.879 2.636 6.364 2.636c2.125 0 4.078-0.737 5.618-1.968l3.675 3.675c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="#" class="MainBtn Transparent">
+                            <div>Contact Sales</div>
+                        </a>
+                        <a href="#" class="MainBtn Black">
+                            <div>Contact Sales</div>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <script src="vendors/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+        <script src="vendors/jQuery-3.7.1/jQuery.js"></script>
+        <script src="scripts.js"></script>
+    </body>
+</html>
