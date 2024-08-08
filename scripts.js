@@ -92,4 +92,13 @@ jQuery(document).ready(function() {
     });
 
     jQuery(".ArticleBannerModal button").on("click", ImageZoomOut);
+
+    jQuery(".AnimatedSlider").hover(
+        function() {
+            jQuery(this).css("--animation-status", "paused");
+        },
+        function() {
+            jQuery(this).css("--animation-status", "running");
+        }
+    );
 })
