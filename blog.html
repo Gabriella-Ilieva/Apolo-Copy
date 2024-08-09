@@ -1,844 +1,844 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog page</title>
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="vendors/bootstrap-5.3.3-dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="styles/styles.css" />
-</head>
-<body>
-    <header class="HeaderSection">
-        <nav class="HeaderNavigation d-flex align-items-center justify-content-between w-100">
-            <div class="HeaderLeft">
-                <div class="HeaderLogoWrapper position-relative">
-                    <a href="#" class="HeaderLogoLink">
-                        <svg
-                            viewBox="0 0 78 78"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="AnimatedHeaderLogo">
-                            <path
-                                d="M39 77.5C60.263 77.5 77.5 60.263 77.5 39C77.5 17.737 60.263 0.5 39 0.5C17.737 0.5 0.5 17.737 0.5 39C0.5 60.263 17.737 77.5 39 77.5Z"
-                                fill="transparent"
-                                stroke="var(--color)">
-                            </path>
-                            <path
-                                d="M50.6771 46.4275L49.4452 42.9266L47.8229 38.3168L46.6494 34.9807L45.113 30.6146L43.3283 25.5435H34.6718L33.2901 29.4703L32.0582 32.9712L25.9397 50.3582H31.6489L33.4399 45.2831H42.098L40.5616 40.917H34.9699L36.1435 37.5809L38.5949 30.6146L39.0001 29.4616L39.4053 30.6146L46.3496 50.3543L46.3512 50.3582H52.0604L50.6771 46.4275Z"
-                                fill="var(--color)">
-                            </path>
-                            <path
-                                d="M61.5744 26.2968C63.7606 30.1732 64.906 34.5496 64.899 39C64.899 53.3034 53.3036 64.8989 39.0002 64.8989C24.6968 64.8989 13.1013 53.3034 13.1013 39C13.1013 24.6966 24.6968 13.1012 39.0002 13.1012C43.6465 13.0938 48.2085 14.3425 52.2034 16.7151"
-                                stroke="var(--color)"
-                                stroke-width="2.20228"
-                                stroke-miterlimit="10"
-                                stroke-linecap="round">
-                            </path>
-                        </svg>
-                        <div class="LogoDotWrapper">
-                            <span class="LogoDot"></span>
-                        </div>
-                    </a>
-                </div>
-                <div class="NavigationListWrapper">
-                    <div class="position-relative">
-                        <ul data-orientation="horizontal"
-                            class="NavigationList"
-                            role="list">
-                            <li class="NavigationItem">
-                                <a id="FirstDropDownBtn" class="DropDownBtn" data-state="closed"
-                                    aria-expanded="false" aria-controls="FirstItem"
-                                    data-radix-collection-item="">Product
-                                    <svg width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="DropDownArrow">
-                                        <path
-                                            d="M12 6v12.5m0 0 6-6m-6 6-6-6"
-                                            stroke="currentColor"
-                                            stroke-width="1.5"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                        </path>
-                                    </svg>
-                                </a>
-                                <div id="FirstItem"
-                                    aria-labelledby="FirstDropDownBtn"
-                                    class="DropDownContent"
-                                    data-state="closed"
-                                    aria-labelledby="FirstDropDownBtn">
-                                    <a class="DropDownItem" href="#">GraphOS</a>
-                                    <a class="DropDownItem" href="#">Apollo Federation</a>
-                                    <a class="DropDownItem" href="#">Apollo Client</a>
-                                    <a class="DropDownItem" href="#">Apollo Server</a>
-                                </div>
-                            </li>
-                            <li class="NavigationItem">
-                                <a class="DropDownBtn" data-active="false" href="#">Pricing</a>
-                            </li>
-                            <li class="NavigationItem">
-                                <a id="SecondDropDownBtn"
-                                    class="DropDownBtn"
-                                    data-state="closed"
-                                    aria-expanded="false"
-                                    aria-controls="SecondItem"
-                                    data-radix-collection-item="">
-                                    Developers
-                                    <svg
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="DropDownArrow">
-                                        <path d="M12 6v12.5m0 0 6-6m-6 6-6-6"
-                                            stroke="currentColor"
-                                            stroke-width="1.5"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                        </path>
-                                    </svg>
-                                </a>
-                                <div id="SecondItem"
-                                    class="DropDownContent"
-                                    data-state="closed"
-                                    aria-labelledby="FirstDropDownBtn">
-                                    <a href="#">Apollo Federation</a>
-                                    <a href="#">GraphOS</a>
-                                    <a href="#">GraphOS</a>
-                                    <a href="#">GraphOS</a>
-                                </div>
-                            </li>
-                            <li class="NavigationItem">
-                                <a id="ThirdDropDownBtn" class="DropDownBtn" data-state="closed"
-                                    aria-expanded="false" aria-controls="ThirdItem"
-                                    data-radix-collection-item="">Enterprise
-                                    <svg width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="DropDownArrow">
-                                        <path
-                                            d="M12 6v12.5m0 0 6-6m-6 6-6-6"
-                                            stroke="currentColor"
-                                            stroke-width="1.5"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        ></path>
-                                    </svg>
-                                </a>
-                                <div id="ThirdItem" class="DropDownContent" data-state="closed" aria-labelledby="FirstDropDownBtn">
-                                    <a href="#">GraphOS</a>
-                                    <a href="#">GraphOS</a>
-                                    <a href="#">GraphOS</a>
-                                    <a href="#">GraphOS</a>
-                                </div>
-                            </li>
-                            <li class="NavigationItem">
-                                <a id="FourthDropDownBtn" class="DropDownBtn" data-state="closed"
-                                    aria-expanded="false" aria-controls="FourthItem"
-                                    data-radix-collection-item=""> Company
-                                    <svg width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="DropDownArrow">
-                                        <path
-                                            d="M12 6v12.5m0 0 6-6m-6 6-6-6"
-                                            stroke="currentColor"
-                                            stroke-width="1.5"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                        </path>
-                                    </svg>
-                                </a>
-                                <div id="FourthItem" class="DropDownContent" data-state="closed" aria-labelledby="FirstDropDownBtn">
-                                    <a href="#">GraphOS</a>
-                                    <a href="#">GraphOS</a>
-                                    <a href="#">GraphOS</a>
-                                    <a href="#">GraphOS</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="HeaderRight">
-                <button type="button" class="MobileBurgerButton MainBtn MobileNavBtn" data-state="closed" aria-expanded="false" aria-controls="MobileMenu">Menu</button>
-                <div class="NavigationRightWrapper">
-                    <div class="SearchBtnWrapper"
-                        aria-expanded="false"
-                        aria-haspopup="listbox">
-                        <a class="SearchBtn">
-                            <div class="SearchBtnIcon">
-                                <svg
-                                    class="SearchIcon"
-                                    viewBox="0 0 24 24"
-                                    width="20"
-                                    height="20"
-                                    fill="currentColor">
-                                    <path d="M16.041 15.856c-0.034 0.026-0.067 0.055-0.099 0.087s-0.060 0.064-0.087 0.099c-1.258 1.213-2.969 1.958-4.855 1.958-1.933 0-3.682-0.782-4.95-2.050s-2.050-3.017-2.050-4.95 0.782-3.682 2.050-4.95 3.017-2.050 4.95-2.050 3.682 0.782 4.95 2.050 2.050 3.017 2.050 4.95c0 1.886-0.745 3.597-1.959 4.856zM21.707 20.293l-3.675-3.675c1.231-1.54 1.968-3.493 1.968-5.618 0-2.485-1.008-4.736-2.636-6.364s-3.879-2.636-6.364-2.636-4.736 1.008-6.364 2.636-2.636 3.879-2.636 6.364 1.008 4.736 2.636 6.364 3.879 2.636 6.364 2.636c2.125 0 4.078-0.737 5.618-1.968l3.675 3.675c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z"></path>
-                                </svg>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="vendors/bootstrap-5.3.3-dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header class="HeaderSection">
+            <nav class="HeaderNavigation d-flex align-items-center justify-content-between w-100">
+                <div class="HeaderLeft">
+                    <div class="HeaderLogoWrapper position-relative">
+                        <a href="#" class="HeaderLogoLink">
+                            <svg
+                                viewBox="0 0 78 78"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="AnimatedHeaderLogo">
+                                <path
+                                    d="M39 77.5C60.263 77.5 77.5 60.263 77.5 39C77.5 17.737 60.263 0.5 39 0.5C17.737 0.5 0.5 17.737 0.5 39C0.5 60.263 17.737 77.5 39 77.5Z"
+                                    fill="transparent"
+                                    stroke="var(--color)">
+                                </path>
+                                <path
+                                    d="M50.6771 46.4275L49.4452 42.9266L47.8229 38.3168L46.6494 34.9807L45.113 30.6146L43.3283 25.5435H34.6718L33.2901 29.4703L32.0582 32.9712L25.9397 50.3582H31.6489L33.4399 45.2831H42.098L40.5616 40.917H34.9699L36.1435 37.5809L38.5949 30.6146L39.0001 29.4616L39.4053 30.6146L46.3496 50.3543L46.3512 50.3582H52.0604L50.6771 46.4275Z"
+                                    fill="var(--color)">
+                                </path>
+                                <path
+                                    d="M61.5744 26.2968C63.7606 30.1732 64.906 34.5496 64.899 39C64.899 53.3034 53.3036 64.8989 39.0002 64.8989C24.6968 64.8989 13.1013 53.3034 13.1013 39C13.1013 24.6966 24.6968 13.1012 39.0002 13.1012C43.6465 13.0938 48.2085 14.3425 52.2034 16.7151"
+                                    stroke="var(--color)"
+                                    stroke-width="2.20228"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round">
+                                </path>
+                            </svg>
+                            <div class="LogoDotWrapper">
+                                <span class="LogoDot"></span>
                             </div>
                         </a>
                     </div>
-                    <a href="#" class="MainBtn Transparent">
-                        <div>Contact Sales</div>
-                    </a>
-                    <a href="#" class="MainBtn Black">
-                        <div>Contact Sales</div>
-                    </a>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main class="MainSection">
-        <section class="MainArticlesSection Section">
-            <div class="Wrapper">
-                <div>
-                    <h4>Blog</h4>
-                    <div class="MainArticlesCategories">
-                        <div class="CategoriesDesktop">
-                            <a artia-label="Announcement" class="SingleCategory h5" href="#">Announcement</a>
-                            <a artia-label="Announcement" class="SingleCategory h5" href="#">Apollo Client</a>
-                            <a artia-label="Announcement" class="SingleCategory h5" href="#">Apollo Federation</a>
-                            <a artia-label="Announcement" class="SingleCategory h5" href="#">Backend</a>
-                            <a artia-label="Announcement" class="SingleCategory h5" href="#">Community</a>
-                            <a artia-label="Announcement" class="SingleCategory h5" href="#">Engineering</a>
-                            <a artia-label="Announcement" class="SingleCategory h5" href="#">Events</a>
-                            <a artia-label="Announcement" class="SingleCategory h5" href="#">Frontend</a>
-                            <a artia-label="Announcement" class="SingleCategory h5" href="#">GraphOS</a>
-                            <a artia-label="Announcement" class="SingleCategory h5" href="#">GraphQL</a>
-                            <a artia-label="Announcement" class="SingleCategory h5" href="#">How-to</a>
-                            <a artia-label="Announcement" class="SingleCategory h5" href="#">Life at Apollo</a>
-                            <a artia-label="Announcement" class="SingleCategory h5" href="#">Mobile</a>
-                            <a artia-label="Announcement" class="SingleCategory h5" href="#">Partners</a>
-                            <a artia-label="Announcement" class="SingleCategory h5" href="#">Platform Engineering</a>
-                            <a artia-label="Announcement" class="SingleCategory h5" href="#">Tooling</a>
-                            <a artia-label="Announcement" class="SingleCategory h5" href="#">Webinar</a>
-                        </div>
-                        <div class="CategoriesMobile">
-                            <div class="CategoriesMobileContainer">
-                                <div class="CategoriesMobileWrapper">
-                                    <select class="CategoriesMobileSelect">
-                                        <option value="/" selected="">All posts</option>
-                                        <option value="/category/announcement">Announcement</option>
-                                        <option value="/category/apollo-client">Apollo Client</option>
-                                        <option value="/category/apollo-federation">Apollo Federation</option>
-                                        <option value="/category/backend">Backend</option>
-                                        <option value="/category/community">Community</option>
-                                        <option value="/category/engineering">Engineering</option>
-                                        <option value="/category/events">Events</option>
-                                        <option value="/category/frontend">Frontend</option>
-                                        <option value="/category/platform">GraphOS</option>
-                                        <option value="/category/graphql">GraphQL</option>
-                                        <option value="/category/how-to">How-to</option>
-                                        <option value="/category/life-at-apollo">Life at Apollo</option>
-                                        <option value="/category/mobile">Mobile</option>
-                                        <option value="/category/partners">Partners</option>
-                                        <option value="/category/platform-engineering">Platform Engineering</option>
-                                        <option value="/category/tooling">Tooling</option>
-                                        <option value="/category/webinar">Webinar</option>
-                                    </select>
-                                    <span class="CategoriesMobileSelectArrow">
-                                        <svg viewBox="0 0 24 24" 
-                                            fill="none" 
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6 9L12 15L18 9" 
-                                                stroke="currentColor" 
-                                                stroke-width="1.125" 
-                                                stroke-linecap="round" 
+                    <div class="NavigationListWrapper">
+                        <div class="position-relative">
+                            <ul data-orientation="horizontal"
+                                class="NavigationList"
+                                role="list">
+                                <li class="NavigationItem">
+                                    <a id="FirstDropDownBtn" class="DropDownBtn" data-state="closed"
+                                        aria-expanded="false" aria-controls="FirstItem"
+                                        data-radix-collection-item="">Product
+                                        <svg width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="DropDownArrow">
+                                            <path
+                                                d="M12 6v12.5m0 0 6-6m-6 6-6-6"
+                                                stroke="currentColor"
+                                                stroke-width="1.5"
+                                                stroke-linecap="round"
                                                 stroke-linejoin="round">
                                             </path>
                                         </svg>
-                                    </span>
+                                    </a>
+                                    <div id="FirstItem"
+                                        aria-labelledby="FirstDropDownBtn"
+                                        class="DropDownContent"
+                                        data-state="closed"
+                                        aria-labelledby="FirstDropDownBtn">
+                                        <a class="DropDownItem" href="#">GraphOS</a>
+                                        <a class="DropDownItem" href="#">Apollo Federation</a>
+                                        <a class="DropDownItem" href="#">Apollo Client</a>
+                                        <a class="DropDownItem" href="#">Apollo Server</a>
+                                    </div>
+                                </li>
+                                <li class="NavigationItem">
+                                    <a class="DropDownBtn" data-active="false" href="#">Pricing</a>
+                                </li>
+                                <li class="NavigationItem">
+                                    <a id="SecondDropDownBtn"
+                                        class="DropDownBtn"
+                                        data-state="closed"
+                                        aria-expanded="false"
+                                        aria-controls="SecondItem"
+                                        data-radix-collection-item="">
+                                        Developers
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="DropDownArrow">
+                                            <path d="M12 6v12.5m0 0 6-6m-6 6-6-6"
+                                                stroke="currentColor"
+                                                stroke-width="1.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <div id="SecondItem"
+                                        class="DropDownContent"
+                                        data-state="closed"
+                                        aria-labelledby="FirstDropDownBtn">
+                                        <a href="#">Apollo Federation</a>
+                                        <a href="#">GraphOS</a>
+                                        <a href="#">GraphOS</a>
+                                        <a href="#">GraphOS</a>
+                                    </div>
+                                </li>
+                                <li class="NavigationItem">
+                                    <a id="ThirdDropDownBtn" class="DropDownBtn" data-state="closed"
+                                        aria-expanded="false" aria-controls="ThirdItem"
+                                        data-radix-collection-item="">Enterprise
+                                        <svg width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="DropDownArrow">
+                                            <path
+                                                d="M12 6v12.5m0 0 6-6m-6 6-6-6"
+                                                stroke="currentColor"
+                                                stroke-width="1.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                    <div id="ThirdItem" class="DropDownContent" data-state="closed" aria-labelledby="FirstDropDownBtn">
+                                        <a href="#">GraphOS</a>
+                                        <a href="#">GraphOS</a>
+                                        <a href="#">GraphOS</a>
+                                        <a href="#">GraphOS</a>
+                                    </div>
+                                </li>
+                                <li class="NavigationItem">
+                                    <a id="FourthDropDownBtn" class="DropDownBtn" data-state="closed"
+                                        aria-expanded="false" aria-controls="FourthItem"
+                                        data-radix-collection-item=""> Company
+                                        <svg width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="DropDownArrow">
+                                            <path
+                                                d="M12 6v12.5m0 0 6-6m-6 6-6-6"
+                                                stroke="currentColor"
+                                                stroke-width="1.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <div id="FourthItem" class="DropDownContent" data-state="closed" aria-labelledby="FirstDropDownBtn">
+                                        <a href="#">GraphOS</a>
+                                        <a href="#">GraphOS</a>
+                                        <a href="#">GraphOS</a>
+                                        <a href="#">GraphOS</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="HeaderRight">
+                    <button type="button" class="MobileBurgerButton MainBtn MobileNavBtn" data-state="closed" aria-expanded="false" aria-controls="MobileMenu">Menu</button>
+                    <div class="NavigationRightWrapper">
+                        <div class="SearchBtnWrapper"
+                            aria-expanded="false"
+                            aria-haspopup="listbox">
+                            <a class="SearchBtn">
+                                <div class="SearchBtnIcon">
+                                    <svg
+                                        class="SearchIcon"
+                                        viewBox="0 0 24 24"
+                                        width="20"
+                                        height="20"
+                                        fill="currentColor">
+                                        <path d="M16.041 15.856c-0.034 0.026-0.067 0.055-0.099 0.087s-0.060 0.064-0.087 0.099c-1.258 1.213-2.969 1.958-4.855 1.958-1.933 0-3.682-0.782-4.95-2.050s-2.050-3.017-2.050-4.95 0.782-3.682 2.050-4.95 3.017-2.050 4.95-2.050 3.682 0.782 4.95 2.050 2.050 3.017 2.050 4.95c0 1.886-0.745 3.597-1.959 4.856zM21.707 20.293l-3.675-3.675c1.231-1.54 1.968-3.493 1.968-5.618 0-2.485-1.008-4.736-2.636-6.364s-3.879-2.636-6.364-2.636-4.736 1.008-6.364 2.636-2.636 3.879-2.636 6.364 1.008 4.736 2.636 6.364 3.879 2.636 6.364 2.636c2.125 0 4.078-0.737 5.618-1.968l3.675 3.675c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z"></path>
+                                    </svg>
                                 </div>
+                            </a>
+                        </div>
+                        <a href="#" class="MainBtn Transparent">
+                            <div>Contact Sales</div>
+                        </a>
+                        <a href="#" class="MainBtn Black">
+                            <div>Contact Sales</div>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="MainSection">
+            <section class="MainArticlesSection Section">
+                <div class="Wrapper">
+                    <div>
+                        <h4>Blog</h4>
+                        <div class="MainArticlesCategories">
+                            <div class="CategoriesDesktop">
+                                <a artia-label="Announcement" class="SingleCategory h5" href="#">Announcement</a>
+                                <a artia-label="Announcement" class="SingleCategory h5" href="#">Apollo Client</a>
+                                <a artia-label="Announcement" class="SingleCategory h5" href="#">Apollo Federation</a>
+                                <a artia-label="Announcement" class="SingleCategory h5" href="#">Backend</a>
+                                <a artia-label="Announcement" class="SingleCategory h5" href="#">Community</a>
+                                <a artia-label="Announcement" class="SingleCategory h5" href="#">Engineering</a>
+                                <a artia-label="Announcement" class="SingleCategory h5" href="#">Events</a>
+                                <a artia-label="Announcement" class="SingleCategory h5" href="#">Frontend</a>
+                                <a artia-label="Announcement" class="SingleCategory h5" href="#">GraphOS</a>
+                                <a artia-label="Announcement" class="SingleCategory h5" href="#">GraphQL</a>
+                                <a artia-label="Announcement" class="SingleCategory h5" href="#">How-to</a>
+                                <a artia-label="Announcement" class="SingleCategory h5" href="#">Life at Apollo</a>
+                                <a artia-label="Announcement" class="SingleCategory h5" href="#">Mobile</a>
+                                <a artia-label="Announcement" class="SingleCategory h5" href="#">Partners</a>
+                                <a artia-label="Announcement" class="SingleCategory h5" href="#">Platform Engineering</a>
+                                <a artia-label="Announcement" class="SingleCategory h5" href="#">Tooling</a>
+                                <a artia-label="Announcement" class="SingleCategory h5" href="#">Webinar</a>
+                            </div>
+                            <div class="CategoriesMobile">
+                                <div class="CategoriesMobileContainer">
+                                    <div class="CategoriesMobileWrapper">
+                                        <select class="CategoriesMobileSelect">
+                                            <option value="/" selected="">All posts</option>
+                                            <option value="/category/announcement">Announcement</option>
+                                            <option value="/category/apollo-client">Apollo Client</option>
+                                            <option value="/category/apollo-federation">Apollo Federation</option>
+                                            <option value="/category/backend">Backend</option>
+                                            <option value="/category/community">Community</option>
+                                            <option value="/category/engineering">Engineering</option>
+                                            <option value="/category/events">Events</option>
+                                            <option value="/category/frontend">Frontend</option>
+                                            <option value="/category/platform">GraphOS</option>
+                                            <option value="/category/graphql">GraphQL</option>
+                                            <option value="/category/how-to">How-to</option>
+                                            <option value="/category/life-at-apollo">Life at Apollo</option>
+                                            <option value="/category/mobile">Mobile</option>
+                                            <option value="/category/partners">Partners</option>
+                                            <option value="/category/platform-engineering">Platform Engineering</option>
+                                            <option value="/category/tooling">Tooling</option>
+                                            <option value="/category/webinar">Webinar</option>
+                                        </select>
+                                        <span class="CategoriesMobileSelectArrow">
+                                            <svg viewBox="0 0 24 24" 
+                                                fill="none" 
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 9L12 15L18 9" 
+                                                    stroke="currentColor" 
+                                                    stroke-width="1.125" 
+                                                    stroke-linecap="round" 
+                                                    stroke-linejoin="round">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h2>What's new</h2>
+                        <section class="MainArticlesCardSection Section">
+                            <div class="MainArticlesCard CardWrapper Section">
+                                <div class="BackgroundWrapper">
+                                    <img alt="What’s new in Apollo Client 3.11" draggable="false" fetchpriority="high" decoding="async" data-nimg="fill" src="assets/background.svg">
+                                </div>
+                                <div class="ContentWrapper position-relative">
+                                    <p>July 23, 2024</p>
+                                    <h1 class="CardTitle h4">What’s new in Apollo Client 3.11</h1>
+                                    <a class="MainBtn Red" href="#">
+                                        <div>Read article</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="GridArticlesSection">
+                        <div class="GridArticlesContainer">
+                            <div class="GridArticlesWrapper">
+                                <article class="SingleArticleCard CardWrapper">
+                                    <div class="SingleArticleCardContent">
+                                        <a class="ArticleLink" href="#">
+                                            <small class="ArticleDate">
+                                                <span class="RedDot"></span>
+                                                July 16, 2024
+                                            </small>
+                                            <h4 class="CardTitle">Enhanced Checks and Observability in GraphOS</h4>
+                                        </a>
+                                        <hr>
+                                        <div class="ArticleAuthor">
+                                            <a class="AuthorLink" href="#">
+                                                <div class="AuthorImgWrapper">
+                                                    <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
+                                                </div>
+                                                <p>Nick Marsh</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="SingleArticleCard CardWrapper">
+                                    <div class="SingleArticleCardContent">
+                                        <a class="ArticleLink" href="#">
+                                            <small class="ArticleDate">
+                                                <span class="RedDot"></span>
+                                                July 16, 2024
+                                            </small>
+                                            <h4 class="CardTitle">Enhanced Checks and Observability in GraphOS</h4>
+                                        </a>
+                                        <hr>
+                                        <div class="ArticleAuthor">
+                                            <a class="AuthorLink" href="#">
+                                                <div class="AuthorImgWrapper">
+                                                    <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
+                                                </div>
+                                                <p>Nick Marsh</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="SingleArticleCard CardWrapper">
+                                    <div class="SingleArticleCardContent">
+                                        <a class="ArticleLink" href="#">
+                                            <small class="ArticleDate">
+                                                <span class="RedDot"></span>
+                                                July 16, 2024
+                                            </small>
+                                            <h4 class="CardTitle">Enhanced Checks and Observability in GraphOS</h4>
+                                        </a>
+                                        <hr>
+                                        <div class="ArticleAuthor">
+                                            <a class="AuthorLink" href="#">
+                                                <div class="AuthorImgWrapper">
+                                                    <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
+                                                </div>
+                                                <p>Nick Marsh</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="SingleArticleCard CardWrapper">
+                                    <div class="SingleArticleCardContent">
+                                        <a class="ArticleLink" href="#">
+                                            <small class="ArticleDate">
+                                                <span class="RedDot"></span>
+                                                July 16, 2024
+                                            </small>
+                                            <h4 class="CardTitle">Enhanced Checks and Observability in GraphOS</h4>
+                                        </a>
+                                        <hr>
+                                        <div class="ArticleAuthor">
+                                            <a class="AuthorLink" href="#">
+                                                <div class="AuthorImgWrapper">
+                                                    <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
+                                                </div>
+                                                <p>Nick Marsh</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="SingleArticleCard CardWrapper">
+                                    <div class="SingleArticleCardContent">
+                                        <a class="ArticleLink" href="#">
+                                            <small class="ArticleDate">
+                                                <span class="RedDot"></span>
+                                                July 16, 2024
+                                            </small>
+                                            <h4 class="CardTitle">Enhanced Checks and Observability in GraphOS</h4>
+                                        </a>
+                                        <hr>
+                                        <div class="ArticleAuthor">
+                                            <a class="AuthorLink" href="#">
+                                                <div class="AuthorImgWrapper">
+                                                    <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
+                                                </div>
+                                                <p>Nick Marsh</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="SingleArticleCard CardWrapper">
+                                    <div class="SingleArticleCardContent">
+                                        <a class="ArticleLink" href="#">
+                                            <small class="ArticleDate">
+                                                <span class="RedDot"></span>
+                                                July 16, 2024
+                                            </small>
+                                            <h4 class="CardTitle">Enhanced Checks and Observability in GraphOS</h4>
+                                        </a>
+                                        <hr>
+                                        <div class="ArticleAuthor">
+                                            <a class="AuthorLink" href="#">
+                                                <div class="AuthorImgWrapper">
+                                                    <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
+                                                </div>
+                                                <p>Nick Marsh</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
                             </div>
                         </div>
                     </div>
-                    <h2>What's new</h2>
-                    <section class="MainArticlesCardSection Section">
-                        <div class="MainArticlesCard CardWrapper Section">
-                            <div class="BackgroundWrapper">
-                                <img alt="What’s new in Apollo Client 3.11" draggable="false" fetchpriority="high" decoding="async" data-nimg="fill" src="assets/background.svg">
-                            </div>
-                            <div class="ContentWrapper position-relative">
-                                <p>July 23, 2024</p>
-                                <h1 class="CardTitle h4">What’s new in Apollo Client 3.11</h1>
-                                <a class="MainBtn Red" href="#">
-                                    <div>Read article</div>
-                                </a>
-                            </div>
-                        </div>
-                    </section>
                 </div>
-                <div class="GridArticlesSection">
-                    <div class="GridArticlesContainer">
-                        <div class="GridArticlesWrapper">
-                            <article class="SingleArticleCard CardWrapper">
-                                <div class="SingleArticleCardContent">
-                                    <a class="ArticleLink" href="#">
-                                        <small class="ArticleDate">
-                                            <span class="RedDot"></span>
-                                            July 16, 2024
-                                        </small>
-                                        <h4 class="CardTitle">Enhanced Checks and Observability in GraphOS</h4>
-                                    </a>
-                                    <hr>
-                                    <div class="ArticleAuthor">
-                                        <a class="AuthorLink" href="#">
-                                            <div class="AuthorImgWrapper">
-                                                <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
-                                            </div>
-                                            <p>Nick Marsh</p>
+            </section>
+            <section class="ArchiveArticlesSection Section">
+                <div class="ArchiveArticlesWrapper">
+                    <h2>Past posts</h2>
+                    <div>
+                        <div class="ArchiveArticles">
+                            <div class="ArticlesContainer">
+                                <article class="ArchiveSinglePost CardWrapper">
+                                    <div class="SingleArticleCardContent">
+                                        <a class="ArticleLink" href="#">
+                                            <small class="ArticleDate">
+                                                <span class="RedDot"></span>
+                                                June 4, 2024
+                                            </small>
+                                            <h5 class="blog-article_title__qTmSN">Across the universe: Meet five Apollonauts thriving in a distributed world</h5>
                                         </a>
+                                        <div class="ArticleAuthor">
+                                            <a class="AuthorLink" href="#">
+                                                <div class="AuthorImgWrapper">
+                                                    <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
+                                                </div>
+                                                <small>Melanie Marshall</small>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                            </article>
-                            <article class="SingleArticleCard CardWrapper">
-                                <div class="SingleArticleCardContent">
-                                    <a class="ArticleLink" href="#">
-                                        <small class="ArticleDate">
-                                            <span class="RedDot"></span>
-                                            July 16, 2024
-                                        </small>
-                                        <h4 class="CardTitle">Enhanced Checks and Observability in GraphOS</h4>
-                                    </a>
-                                    <hr>
-                                    <div class="ArticleAuthor">
-                                        <a class="AuthorLink" href="#">
-                                            <div class="AuthorImgWrapper">
-                                                <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
-                                            </div>
-                                            <p>Nick Marsh</p>
+                                </article>
+                                <article class="ArchiveSinglePost CardWrapper">
+                                    <div class="SingleArticleCardContent">
+                                        <a class="ArticleLink" href="#">
+                                            <small class="ArticleDate">
+                                                <span class="RedDot"></span>
+                                                June 4, 2024
+                                            </small>
+                                            <h5 class="blog-article_title__qTmSN">Across the universe: Meet five Apollonauts thriving in a distributed world</h5>
                                         </a>
+                                        <div class="ArticleAuthor">
+                                            <a class="AuthorLink" href="#">
+                                                <div class="AuthorImgWrapper">
+                                                    <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
+                                                </div>
+                                                <small>Melanie Marshall</small>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                            </article>
-                            <article class="SingleArticleCard CardWrapper">
-                                <div class="SingleArticleCardContent">
-                                    <a class="ArticleLink" href="#">
-                                        <small class="ArticleDate">
-                                            <span class="RedDot"></span>
-                                            July 16, 2024
-                                        </small>
-                                        <h4 class="CardTitle">Enhanced Checks and Observability in GraphOS</h4>
-                                    </a>
-                                    <hr>
-                                    <div class="ArticleAuthor">
-                                        <a class="AuthorLink" href="#">
-                                            <div class="AuthorImgWrapper">
-                                                <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
-                                            </div>
-                                            <p>Nick Marsh</p>
+                                </article>
+                                <article class="ArchiveSinglePost CardWrapper">
+                                    <div class="SingleArticleCardContent">
+                                        <a class="ArticleLink" href="#">
+                                            <small class="ArticleDate">
+                                                <span class="RedDot"></span>
+                                                June 4, 2024
+                                            </small>
+                                            <h5 class="blog-article_title__qTmSN">Across the universe: Meet five Apollonauts thriving in a distributed world</h5>
                                         </a>
+                                        <div class="ArticleAuthor">
+                                            <a class="AuthorLink" href="#">
+                                                <div class="AuthorImgWrapper">
+                                                    <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
+                                                </div>
+                                                <small>Melanie Marshall</small>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                            </article>
-                            <article class="SingleArticleCard CardWrapper">
-                                <div class="SingleArticleCardContent">
-                                    <a class="ArticleLink" href="#">
-                                        <small class="ArticleDate">
-                                            <span class="RedDot"></span>
-                                            July 16, 2024
-                                        </small>
-                                        <h4 class="CardTitle">Enhanced Checks and Observability in GraphOS</h4>
-                                    </a>
-                                    <hr>
-                                    <div class="ArticleAuthor">
-                                        <a class="AuthorLink" href="#">
-                                            <div class="AuthorImgWrapper">
-                                                <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
-                                            </div>
-                                            <p>Nick Marsh</p>
+                                </article>
+                                <article class="ArchiveSinglePost CardWrapper">
+                                    <div class="SingleArticleCardContent">
+                                        <a class="ArticleLink" href="#">
+                                            <small class="ArticleDate">
+                                                <span class="RedDot"></span>
+                                                June 4, 2024
+                                            </small>
+                                            <h5 class="blog-article_title__qTmSN">Across the universe: Meet five Apollonauts thriving in a distributed world</h5>
                                         </a>
+                                        <div class="ArticleAuthor">
+                                            <a class="AuthorLink" href="#">
+                                                <div class="AuthorImgWrapper">
+                                                    <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
+                                                </div>
+                                                <small>Melanie Marshall</small>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                            </article>
-                            <article class="SingleArticleCard CardWrapper">
-                                <div class="SingleArticleCardContent">
-                                    <a class="ArticleLink" href="#">
-                                        <small class="ArticleDate">
-                                            <span class="RedDot"></span>
-                                            July 16, 2024
-                                        </small>
-                                        <h4 class="CardTitle">Enhanced Checks and Observability in GraphOS</h4>
-                                    </a>
-                                    <hr>
-                                    <div class="ArticleAuthor">
-                                        <a class="AuthorLink" href="#">
-                                            <div class="AuthorImgWrapper">
-                                                <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
-                                            </div>
-                                            <p>Nick Marsh</p>
+                                </article>
+                                <article class="ArchiveSinglePost CardWrapper">
+                                    <div class="SingleArticleCardContent">
+                                        <a class="ArticleLink" href="#">
+                                            <small class="ArticleDate">
+                                                <span class="RedDot"></span>
+                                                June 4, 2024
+                                            </small>
+                                            <h5 class="blog-article_title__qTmSN">Across the universe: Meet five Apollonauts thriving in a distributed world</h5>
                                         </a>
+                                        <div class="ArticleAuthor">
+                                            <a class="AuthorLink" href="#">
+                                                <div class="AuthorImgWrapper">
+                                                    <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
+                                                </div>
+                                                <small>Melanie Marshall</small>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                            </article>
-                            <article class="SingleArticleCard CardWrapper">
-                                <div class="SingleArticleCardContent">
-                                    <a class="ArticleLink" href="#">
-                                        <small class="ArticleDate">
-                                            <span class="RedDot"></span>
-                                            July 16, 2024
-                                        </small>
-                                        <h4 class="CardTitle">Enhanced Checks and Observability in GraphOS</h4>
-                                    </a>
-                                    <hr>
-                                    <div class="ArticleAuthor">
-                                        <a class="AuthorLink" href="#">
-                                            <div class="AuthorImgWrapper">
-                                                <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
-                                            </div>
-                                            <p>Nick Marsh</p>
+                                </article>
+                                <article class="ArchiveSinglePost CardWrapper">
+                                    <div class="SingleArticleCardContent">
+                                        <a class="ArticleLink" href="#">
+                                            <small class="ArticleDate">
+                                                <span class="RedDot"></span>
+                                                June 4, 2024
+                                            </small>
+                                            <h5 class="blog-article_title__qTmSN">Across the universe: Meet five Apollonauts thriving in a distributed world</h5>
                                         </a>
+                                        <div class="ArticleAuthor">
+                                            <a class="AuthorLink" href="#">
+                                                <div class="AuthorImgWrapper">
+                                                    <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
+                                                </div>
+                                                <small>Melanie Marshall</small>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                            </article>
+                                </article>
+                            </div>
                         </div>
+                        <div class="ArchiveArticlesPagination">
+                            <button type="button" class="PaginationButton PaginationLeftArrow" disabled="true">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.52539 12.0859H19.0254M19.0254 12.0859L13.0254 6.08594M19.0254 12.0859L13.0254 18.0859" 
+                                        stroke="#15252D" 
+                                        stroke-width="1.5" 
+                                        stroke-linecap="round" 
+                                        stroke-linejoin="round">
+                                    </path>
+                                </svg>
+                            </button>
+                            <div class="PaginationDesktop">
+                                <button type="button" class="PaginationPage paragraph active">1</button>
+                                <button type="button" class="PaginationPage paragraph">2</button>
+                                <button type="button" class="PaginationPage paragraph">3</button>
+                                <button type="button" class="PaginationPage paragraph">4</button>
+                                <button type="button" class="PaginationPage paragraph">...</button>
+                                <button type="button" class="PaginationPage paragraph">86</button>
+                            </div>
+                            <div class="PaginationMobile">
+                                <input class="PaginationMobileInput" min="1" type="number" value="1">
+                                <button type="button" class="PaginationMobileButton">of 86</button>
+                            </div>
+                            <button type="button" class="PaginationButton PaginationRightArrow" disabled="false">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.52539 12.0859H19.0254M19.0254 12.0859L13.0254 6.08594M19.0254 12.0859L13.0254 18.0859" 
+                                        stroke="#15252D" 
+                                        stroke-width="1.5" 
+                                        stroke-linecap="round" 
+                                        stroke-linejoin="round">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="SubscriptionSection Section">
+                <div class="Wrapper">
+                    <div class="SubscriptionCard CardWrapper">
+                        <div class="CardContent">
+                            <div class="CardContentWrapper">
+                                <h4 class="SubscriptionTitle">Stay in our orbit</h4>
+                                <p class="SubscriptionText">Become an Apollo insider and get first access to new features, best practices, and community events. Oh, and no junk mail. Ever.</p>
+                                <form class="SubscriptionForm">
+                                    <div class="InputContainer">
+                                        <div class="InputWrapper">
+                                            <input id="newsletter-email" name="email" required="" class="input_input__Jlaz4" placeholder="Type your email" type="email">
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="MainBtn Red">
+                                        <div class="button_content__1EzBW">
+                                            <span class="">Submit</span>
+                                        </div>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="SubscriptionBackground">
+                            <span class="SubscriptionBackgroundBlur"></span>
+                            <svg width="604" height="604" viewBox="0 0 604 604" class="SubscriptionBackgroundImg" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="301.727" cy="301.652" r="301.07" transform="rotate(-30 301.727 301.652)" fill="#15252D" stroke="url(#:r1g:)" stroke-width=".71221"></circle>
+                                <defs>
+                                    <linearGradient id=":r1g:" x1="301.727" y1=".22579" x2="301.727" y2="137.743" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#FFEADB"></stop>
+                                        <stop offset=".32998" stop-color="#FC5200" stop-opacity="0"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="Section">
+            <div class="position-relative">
+                <div class="Wrapper">
+                    <div class="FooterNavigationWrapper">
+                        <div class="FooterLogoWrapper">
+                            <div class="BigOrbit Orbit">
+                                <div class="OrbitWrapper">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="MiddleOrbit Orbit">
+                                <div class="OrbitWrapper">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="SmallOrbit Orbit">
+                                <div class="OrbitWrapper">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <a class="FooterLogo" aria-description="Apollo GraphQL" aria-label="Go to homepage" href="#">
+                                <img alt="Homepage" fetchpriority="high" decoding="async" data-nimg="fill" src="assets/footer-logo.svg">
+                            </a>
+                        </div>
+                        <div class="FooterLogoMobile">
+                            <a class="FooterLogoLink" href="#">
+                                <img alt="Homepage" fetchpriority="high" decoding="async" data-nimg="fill" src="assets/footer-logo-mobile.svg">
+                            </a>
+                            <p>The <span>GraphQL</span> developer platform.</p>
+                        </div>
+                        <div class="FooterNavigationDesktop">
+                            <div>
+                                <p class="FiraCode">Product</p>
+                                <ul class="small">
+                                    <li>
+                                        <a aria-label="GraphOS" class="FooterNavigationLink" href="#">GraphOS</a>
+                                    </li>
+                                    <li>
+                                        <a aria-label="Apollo Federation" class="FooterNavigationLink" href="#">Apollo Federation</a>
+                                    </li>
+                                    <li>
+                                        <a aria-label="Apollo Client" class="FooterNavigationLink" href="#">Apollo Client</a>
+                                    </li>
+                                    <li>
+                                        <a aria-label="Apollo Server" class="FooterNavigationLink" href="#">Apollo Server</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="FiraCode">Product</p>
+                                <ul class="small">
+                                    <li>
+                                        <a aria-label="GraphOS" class="FooterNavigationLink" href="#">GraphOS</a>
+                                    </li>
+                                    <li>
+                                        <a aria-label="Apollo Federation" class="FooterNavigationLink" href="#">Apollo Federation</a>
+                                    </li>
+                                    <li>
+                                        <a aria-label="Apollo Client" class="FooterNavigationLink" href="#">Apollo Client</a>
+                                    </li>
+                                    <li>
+                                        <a aria-label="Apollo Server" class="FooterNavigationLink" href="#">Apollo Server</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="FiraCode">Product</p>
+                                <ul class="small">
+                                    <li>
+                                        <a aria-label="GraphOS" class="FooterNavigationLink" href="#">GraphOS Enterprise</a>
+                                    </li>
+                                    <li>
+                                        <a aria-label="Apollo Federation" class="FooterNavigationLink" href="#">Professional Services</a>
+                                    </li>
+                                    <li>
+                                        <a aria-label="Apollo Client" class="FooterNavigationLink" href="#">Apollo Client</a>
+                                    </li>
+                                    <li>
+                                        <a aria-label="Apollo Server" class="FooterNavigationLink" href="#">Apollo Server</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="FiraCode">Product</p>
+                                <ul class="small">
+                                    <li>
+                                        <a aria-label="GraphOS" class="FooterNavigationLink" href="#">GraphOS</a>
+                                    </li>
+                                    <li>
+                                        <a aria-label="Apollo Federation" class="FooterNavigationLink" href="#">Apollo Federation</a>
+                                    </li>
+                                    <li>
+                                        <a aria-label="Apollo Client" class="FooterNavigationLink" href="#">Apollo Client</a>
+                                    </li>
+                                    <li>
+                                        <a aria-label="Apollo Server" class="FooterNavigationLink" href="#">Apollo Server</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="FiraCode">Product</p>
+                                <ul class="small">
+                                    <li>
+                                        <a aria-label="GraphOS" class="FooterNavigationLink" href="#">GraphOS</a>
+                                    </li>
+                                    <li>
+                                        <a aria-label="Apollo Federation" class="FooterNavigationLink" href="#">Apollo Federation</a>
+                                    </li>
+                                    <li>
+                                        <a aria-label="Apollo Client" class="FooterNavigationLink" href="#">Apollo Client</a>
+                                    </li>
+                                    <li>
+                                        <a aria-label="Apollo Server" class="FooterNavigationLink" href="#">Apollo Server</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="FooterCopyrightContainer">
+                        <div class="SocialMediaLinks">
+                            <a target="_blank" class="SocialMediaLink" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 33 33" fill="none">
+                                    <path fill="currentColor" d="m5.108 8.305 8.536 11.413-8.59 9.28h1.934l7.52-8.125 6.076 8.124h6.579l-9.016-12.055 7.995-8.637h-1.934l-6.925 7.482-5.596-7.482H5.108ZM7.951 9.73h3.023l13.345 17.844h-3.022L7.951 9.73Z"></path>
+                                </svg>
+                            </a>
+                            <a target="_blank" class="SocialMediaLink" href="#">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <title>GitHub</title>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16 2.99512c-7.36671 0-13.33337 5.96666-13.33337 13.33328 0 5.9 3.81666 10.8834 9.11667 12.65.6667.1167.9167-.2833.9167-.6333 0-.3167-.0167-1.3667-.0167-2.4833-3.35001.6166-4.21667-.8167-4.48334-1.5667-.15-.3833-.8-1.5667-1.36667-1.8833-.46666-.25-1.13333-.8667-.01666-.8834 1.05-.0166 1.8.9667 2.05 1.3667 1.19997 2.0167 3.11667 1.45 3.88337 1.1.1166-.8667.4666-1.45.85-1.7833-2.9667-.3334-6.06671-1.4834-6.06671-6.5834 0-1.45.51667-2.65 1.36667-3.5833-.13333-.3333-.6-1.7.13333-3.53332 0 0 1.11671-.35 3.66671 1.36667 1.0666-.3 2.2-.45 3.3333-.45 1.1333 0 2.2667.15 3.3333.45 2.55-1.73333 3.6667-1.36667 3.6667-1.36667.7333 1.83332.2667 3.20002.1333 3.53332.85.9333 1.3667 2.1167 1.3667 3.5833 0 5.1167-3.1167 6.25-6.0833 6.5834.4833.4166.9 1.2166.9 2.4666 0 1.7834-.0167 3.2167-.0167 3.6667 0 .35.25.7667.9167.6333 2.6469-.8935 4.9469-2.5947 6.5764-4.8639a13.35537 13.35537 0 0 0 2.5069-7.7861c0-7.36662-5.9667-13.33328-13.3333-13.33328Z" fill="currentColor"></path>
+                                </svg>
+                            </a>
+                            <a target="_blank" class="SocialMediaLink" href="#">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Youtube</title>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26.3893 7.2201c1.1468.30808 2.054 1.21524 2.362 2.362.5649 2.0881.582 6.4185.582 6.4185s0 4.3474-.5648 6.4185c-.3081 1.1467-1.2153 2.0539-2.362 2.362-2.0711.5648-10.4065.5648-10.4065.5648s-8.33552 0-10.40654-.5648c-1.14678-.3081-2.05392-1.2153-2.36201-2.362-.56482-2.0882-.56482-6.4185-.56482-6.4185s0-4.3304.54771-6.40138c.30808-1.14677 1.21523-2.05391 2.362-2.362 2.07103-.56483 10.40646-.58195 10.40646-.58195s8.3355 0 10.4065.56483Zm-6.1446 8.7805-6.9148 4.0051v-8.0102l6.9148 4.0051Z" fill="currentColor"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <p>© 2024 Apollo Graph Inc., d/b/a Apollo GraphQL.</p>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="ArchiveArticlesSection Section">
-            <div class="ArchiveArticlesWrapper">
-                <h2>Past posts</h2>
-                <div>
-                    <div class="ArchiveArticles">
-                        <div class="ArticlesContainer">
-                            <article class="ArchiveSinglePost CardWrapper">
-                                <div class="SingleArticleCardContent">
-                                    <a class="ArticleLink" href="#">
-                                        <small class="ArticleDate">
-                                            <span class="RedDot"></span>
-                                            June 4, 2024
-                                        </small>
-                                        <h5 class="blog-article_title__qTmSN">Across the universe: Meet five Apollonauts thriving in a distributed world</h5>
-                                    </a>
-                                    <div class="ArticleAuthor">
-                                        <a class="AuthorLink" href="#">
-                                            <div class="AuthorImgWrapper">
-                                                <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
-                                            </div>
-                                            <small>Melanie Marshall</small>
-                                        </a>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="ArchiveSinglePost CardWrapper">
-                                <div class="SingleArticleCardContent">
-                                    <a class="ArticleLink" href="#">
-                                        <small class="ArticleDate">
-                                            <span class="RedDot"></span>
-                                            June 4, 2024
-                                        </small>
-                                        <h5 class="blog-article_title__qTmSN">Across the universe: Meet five Apollonauts thriving in a distributed world</h5>
-                                    </a>
-                                    <div class="ArticleAuthor">
-                                        <a class="AuthorLink" href="#">
-                                            <div class="AuthorImgWrapper">
-                                                <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
-                                            </div>
-                                            <small>Melanie Marshall</small>
-                                        </a>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="ArchiveSinglePost CardWrapper">
-                                <div class="SingleArticleCardContent">
-                                    <a class="ArticleLink" href="#">
-                                        <small class="ArticleDate">
-                                            <span class="RedDot"></span>
-                                            June 4, 2024
-                                        </small>
-                                        <h5 class="blog-article_title__qTmSN">Across the universe: Meet five Apollonauts thriving in a distributed world</h5>
-                                    </a>
-                                    <div class="ArticleAuthor">
-                                        <a class="AuthorLink" href="#">
-                                            <div class="AuthorImgWrapper">
-                                                <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
-                                            </div>
-                                            <small>Melanie Marshall</small>
-                                        </a>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="ArchiveSinglePost CardWrapper">
-                                <div class="SingleArticleCardContent">
-                                    <a class="ArticleLink" href="#">
-                                        <small class="ArticleDate">
-                                            <span class="RedDot"></span>
-                                            June 4, 2024
-                                        </small>
-                                        <h5 class="blog-article_title__qTmSN">Across the universe: Meet five Apollonauts thriving in a distributed world</h5>
-                                    </a>
-                                    <div class="ArticleAuthor">
-                                        <a class="AuthorLink" href="#">
-                                            <div class="AuthorImgWrapper">
-                                                <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
-                                            </div>
-                                            <small>Melanie Marshall</small>
-                                        </a>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="ArchiveSinglePost CardWrapper">
-                                <div class="SingleArticleCardContent">
-                                    <a class="ArticleLink" href="#">
-                                        <small class="ArticleDate">
-                                            <span class="RedDot"></span>
-                                            June 4, 2024
-                                        </small>
-                                        <h5 class="blog-article_title__qTmSN">Across the universe: Meet five Apollonauts thriving in a distributed world</h5>
-                                    </a>
-                                    <div class="ArticleAuthor">
-                                        <a class="AuthorLink" href="#">
-                                            <div class="AuthorImgWrapper">
-                                                <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
-                                            </div>
-                                            <small>Melanie Marshall</small>
-                                        </a>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="ArchiveSinglePost CardWrapper">
-                                <div class="SingleArticleCardContent">
-                                    <a class="ArticleLink" href="#">
-                                        <small class="ArticleDate">
-                                            <span class="RedDot"></span>
-                                            June 4, 2024
-                                        </small>
-                                        <h5 class="blog-article_title__qTmSN">Across the universe: Meet five Apollonauts thriving in a distributed world</h5>
-                                    </a>
-                                    <div class="ArticleAuthor">
-                                        <a class="AuthorLink" href="#">
-                                            <div class="AuthorImgWrapper">
-                                                <img alt="Author image" loading="lazy" width="44" height="44" decoding="async" data-nimg="1" src="assets/author-img.png">
-                                            </div>
-                                            <small>Melanie Marshall</small>
-                                        </a>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                    <div class="ArchiveArticlesPagination">
-                        <button type="button" class="PaginationButton PaginationLeftArrow" disabled="true">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.52539 12.0859H19.0254M19.0254 12.0859L13.0254 6.08594M19.0254 12.0859L13.0254 18.0859" 
-                                    stroke="#15252D" 
-                                    stroke-width="1.5" 
-                                    stroke-linecap="round" 
-                                    stroke-linejoin="round">
-                                </path>
+        </footer>
+        <div>
+            <div class="MobileMenuContainer" id="MobileMenu" data-state="closed">
+                <div class="SerachFieldWrapper">
+                    <div class="MobileMenuSearchField">
+                        <div class="MobileSearchIcon">
+                            <svg class="aa-SubmitIcon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path d="M16.041 15.856c-0.034 0.026-0.067 0.055-0.099 0.087s-0.060 0.064-0.087 0.099c-1.258 1.213-2.969 1.958-4.855 1.958-1.933 0-3.682-0.782-4.95-2.050s-2.050-3.017-2.050-4.95 0.782-3.682 2.050-4.95 3.017-2.050 4.95-2.050 3.682 0.782 4.95 2.050 2.050 3.017 2.050 4.95c0 1.886-0.745 3.597-1.959 4.856zM21.707 20.293l-3.675-3.675c1.231-1.54 1.968-3.493 1.968-5.618 0-2.485-1.008-4.736-2.636-6.364s-3.879-2.636-6.364-2.636-4.736 1.008-6.364 2.636-2.636 3.879-2.636 6.364 1.008 4.736 2.636 6.364 3.879 2.636 6.364 2.636c2.125 0 4.078-0.737 5.618-1.968l3.675 3.675c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z"></path>
                             </svg>
-                        </button>
-                        <div class="PaginationDesktop">
-                            <button type="button" class="PaginationPage paragraph active">1</button>
-                            <button type="button" class="PaginationPage paragraph">2</button>
-                            <button type="button" class="PaginationPage paragraph">3</button>
-                            <button type="button" class="PaginationPage paragraph">4</button>
-                            <button type="button" class="PaginationPage paragraph">...</button>
-                            <button type="button" class="PaginationPage paragraph">86</button>
                         </div>
-                        <div class="PaginationMobile">
-                            <input class="PaginationMobileInput" min="1" type="number" value="1">
-                            <button type="button" class="PaginationMobileButton">of 86</button>
-                        </div>
-                        <button type="button" class="PaginationButton PaginationRightArrow" disabled="false">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.52539 12.0859H19.0254M19.0254 12.0859L13.0254 6.08594M19.0254 12.0859L13.0254 18.0859" 
-                                    stroke="#15252D" 
-                                    stroke-width="1.5" 
-                                    stroke-linecap="round" 
-                                    stroke-linejoin="round">
-                                </path>
-                            </svg>
-                        </button>
+                        <input type="text" placeholder="What do you want to learn about GraphQL?">
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="SubscriptionSection Section">
-            <div class="Wrapper">
-                <div class="SubscriptionCard CardWrapper">
-                    <div class="CardContent">
-                        <div class="CardContentWrapper">
-                            <h4 class="SubscriptionTitle">Stay in our orbit</h4>
-                            <p class="SubscriptionText">Become an Apollo insider and get first access to new features, best practices, and community events. Oh, and no junk mail. Ever.</p>
-                            <form class="SubscriptionForm">
-                                <div class="InputContainer">
-                                    <div class="InputWrapper">
-                                        <input id="newsletter-email" name="email" required="" class="input_input__Jlaz4" placeholder="Type your email" type="email">
-                                    </div>
+                <div class="MobileMenuWrapper">
+                    <ul class="MobileNavList mb-0 ps-0">
+                        <li class="MobileNavItem">
+                            <button class="MobileNavBtn" type="button" data-state="closed" aria-expanded="false" aria-controls="FirstItemMobile">Product
+                                <svg width="112" height="112" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg" class="MobileNavArrow">
+                                    <path d="M27.9997 56H86.333m0 0-28-28m28 28-28 28" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <div id="FirstItemMobile" class="MobileNavDropDown" data-state="closed">
+                                <div class="DropDownWrapper">
+                                    <a class="paragraph" aria-label="Go to GraphOS page" href="#"> GraphOS</a>
+                                    <a class="paragraph" aria-label="Go to Apollo Federation page" href="#"> Apollo Federation</a>
+                                    <a class="paragraph" aria-label="Go to Apollo Client page" href="#"> Apollo Client</a>
+                                    <a class="paragraph" aria-label="Go to Apollo Server page" href="#"> Apollo Server</a>
                                 </div>
-                                <button type="submit" class="MainBtn Red">
-                                    <div class="button_content__1EzBW">
-                                        <span class="">Submit</span>
-                                    </div>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="SubscriptionBackground">
-                        <span class="SubscriptionBackgroundBlur"></span>
-                        <svg width="604" height="604" viewBox="0 0 604 604" class="SubscriptionBackgroundImg" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="301.727" cy="301.652" r="301.07" transform="rotate(-30 301.727 301.652)" fill="#15252D" stroke="url(#:r1g:)" stroke-width=".71221"></circle>
-                            <defs>
-                                <linearGradient id=":r1g:" x1="301.727" y1=".22579" x2="301.727" y2="137.743" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#FFEADB"></stop>
-                                    <stop offset=".32998" stop-color="#FC5200" stop-opacity="0"></stop>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
+                            </div>
+                        </li>
+                        <li class="MobileNavItem">
+                            <a aria-label="Pricing" href="#">Pricing</a>
+                        </li>
+                        <li class="MobileNavItem">
+                            <button class="MobileNavBtn" type="button" data-state="closed" aria-expanded="false" aria-controls="SecondItemMobile">Developers
+                                <svg width="112" height="112" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg" class="MobileNavArrow">
+                                    <path d="M27.9997 56H86.333m0 0-28-28m28 28-28 28" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <div id="SecondItemMobile" class="MobileNavDropDown" data-state="closed">
+                                <div class="DropDownWrapper">
+                                    <a class="paragraph" aria-label="Go to GraphOS page" href="#"> GraphOS</a>
+                                    <a class="paragraph" aria-label="Go to Apollo Federation page" href="#"> Apollo Federation</a>
+                                    <a class="paragraph" aria-label="Go to Apollo Client page" href="#"> Apollo Client</a>
+                                    <a class="paragraph" aria-label="Go to Apollo Server page" href="#"> Apollo Server</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="MobileNavItem">
+                            <button class="MobileNavBtn" type="button" data-state="closed" aria-expanded="false" aria-controls="ThirdItemMobile">Enterprise
+                                <svg width="112" height="112" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg" class="MobileNavArrow">
+                                    <path d="M27.9997 56H86.333m0 0-28-28m28 28-28 28" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <div id="ThirdItemMobile" class="MobileNavDropDown" data-state="closed">
+                                <div class="DropDownWrapper">
+                                    <a class="paragraph" aria-label="Go to GraphOS page" href="#"> GraphOS</a>
+                                    <a class="paragraph" aria-label="Go to Apollo Federation page" href="#"> Apollo Federation</a>
+                                    <a class="paragraph" aria-label="Go to Apollo Client page" href="#"> Apollo Client</a>
+                                    <a class="paragraph" aria-label="Go to Apollo Server page" href="#"> Apollo Server</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="MobileNavItem">
+                            <button class="MobileNavBtn" type="button" data-state="closed" aria-expanded="false" aria-controls="FourthItemMobile">Company
+                                <svg width="112" height="112" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg" class="MobileNavArrow">
+                                    <path d="M27.9997 56H86.333m0 0-28-28m28 28-28 28" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <div id="FourthItemMobile" class="MobileNavDropDown" data-state="closed">
+                                <div class="DropDownWrapper">
+                                    <a class="paragraph" aria-label="Go to GraphOS page" href="#"> GraphOS</a>
+                                    <a class="paragraph" aria-label="Go to Apollo Federation page" href="#"> Apollo Federation</a>
+                                    <a class="paragraph" aria-label="Go to Apollo Client page" href="#"> Apollo Client</a>
+                                    <a class="paragraph" aria-label="Go to Apollo Server page" href="#"> Apollo Server</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-        </section>
-    </main>
-    <footer class="Section">
-        <div class="position-relative">
-            <div class="Wrapper">
-                <div class="FooterNavigationWrapper">
-                    <div class="FooterLogoWrapper">
-                        <div class="BigOrbit Orbit">
-                            <div class="OrbitWrapper">
-                                <span></span>
-                            </div>
+                <div class="MobileMenuButtons">
+                    <a href="#" class="LightBtn MainBtn">
+                        <div class="button_content__1EzBW">
+                            <span class="">Contact Sales</span>
                         </div>
-                        <div class="MiddleOrbit Orbit">
-                            <div class="OrbitWrapper">
-                                <span></span>
-                            </div>
+                    </a>
+                    <a href="#" class="MainBtn Black">
+                        <div class="button_content__1EzBW">
+                            <span class="">Start for Free</span>
                         </div>
-                        <div class="SmallOrbit Orbit">
-                            <div class="OrbitWrapper">
-                                <span></span>
-                            </div>
-                        </div>
-                        <a class="FooterLogo" aria-description="Apollo GraphQL" aria-label="Go to homepage" href="#">
-                            <img alt="Homepage" fetchpriority="high" decoding="async" data-nimg="fill" src="assets/footer-logo.svg">
-                        </a>
-                    </div>
-                    <div class="FooterLogoMobile">
-                        <a class="FooterLogoLink" href="#">
-                            <img alt="Homepage" fetchpriority="high" decoding="async" data-nimg="fill" src="assets/footer-logo-mobile.svg">
-                        </a>
-                        <p>The <span>GraphQL</span> developer platform.</p>
-                    </div>
-                    <div class="FooterNavigationDesktop">
-                        <div>
-                            <p class="FiraCode">Product</p>
-                            <ul class="small">
-                                <li>
-                                    <a aria-label="GraphOS" class="FooterNavigationLink" href="#">GraphOS</a>
-                                </li>
-                                <li>
-                                    <a aria-label="Apollo Federation" class="FooterNavigationLink" href="#">Apollo Federation</a>
-                                </li>
-                                <li>
-                                    <a aria-label="Apollo Client" class="FooterNavigationLink" href="#">Apollo Client</a>
-                                </li>
-                                <li>
-                                    <a aria-label="Apollo Server" class="FooterNavigationLink" href="#">Apollo Server</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="FiraCode">Product</p>
-                            <ul class="small">
-                                <li>
-                                    <a aria-label="GraphOS" class="FooterNavigationLink" href="#">GraphOS</a>
-                                </li>
-                                <li>
-                                    <a aria-label="Apollo Federation" class="FooterNavigationLink" href="#">Apollo Federation</a>
-                                </li>
-                                <li>
-                                    <a aria-label="Apollo Client" class="FooterNavigationLink" href="#">Apollo Client</a>
-                                </li>
-                                <li>
-                                    <a aria-label="Apollo Server" class="FooterNavigationLink" href="#">Apollo Server</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="FiraCode">Product</p>
-                            <ul class="small">
-                                <li>
-                                    <a aria-label="GraphOS" class="FooterNavigationLink" href="#">GraphOS Enterprise</a>
-                                </li>
-                                <li>
-                                    <a aria-label="Apollo Federation" class="FooterNavigationLink" href="#">Professional Services</a>
-                                </li>
-                                <li>
-                                    <a aria-label="Apollo Client" class="FooterNavigationLink" href="#">Apollo Client</a>
-                                </li>
-                                <li>
-                                    <a aria-label="Apollo Server" class="FooterNavigationLink" href="#">Apollo Server</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="FiraCode">Product</p>
-                            <ul class="small">
-                                <li>
-                                    <a aria-label="GraphOS" class="FooterNavigationLink" href="#">GraphOS</a>
-                                </li>
-                                <li>
-                                    <a aria-label="Apollo Federation" class="FooterNavigationLink" href="#">Apollo Federation</a>
-                                </li>
-                                <li>
-                                    <a aria-label="Apollo Client" class="FooterNavigationLink" href="#">Apollo Client</a>
-                                </li>
-                                <li>
-                                    <a aria-label="Apollo Server" class="FooterNavigationLink" href="#">Apollo Server</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="FiraCode">Product</p>
-                            <ul class="small">
-                                <li>
-                                    <a aria-label="GraphOS" class="FooterNavigationLink" href="#">GraphOS</a>
-                                </li>
-                                <li>
-                                    <a aria-label="Apollo Federation" class="FooterNavigationLink" href="#">Apollo Federation</a>
-                                </li>
-                                <li>
-                                    <a aria-label="Apollo Client" class="FooterNavigationLink" href="#">Apollo Client</a>
-                                </li>
-                                <li>
-                                    <a aria-label="Apollo Server" class="FooterNavigationLink" href="#">Apollo Server</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="FooterCopyrightContainer">
-                    <div class="SocialMediaLinks">
-                        <a target="_blank" class="SocialMediaLink" href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 33 33" fill="none">
-                                <path fill="currentColor" d="m5.108 8.305 8.536 11.413-8.59 9.28h1.934l7.52-8.125 6.076 8.124h6.579l-9.016-12.055 7.995-8.637h-1.934l-6.925 7.482-5.596-7.482H5.108ZM7.951 9.73h3.023l13.345 17.844h-3.022L7.951 9.73Z"></path>
-                            </svg>
-                        </a>
-                        <a target="_blank" class="SocialMediaLink" href="#">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <title>GitHub</title>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16 2.99512c-7.36671 0-13.33337 5.96666-13.33337 13.33328 0 5.9 3.81666 10.8834 9.11667 12.65.6667.1167.9167-.2833.9167-.6333 0-.3167-.0167-1.3667-.0167-2.4833-3.35001.6166-4.21667-.8167-4.48334-1.5667-.15-.3833-.8-1.5667-1.36667-1.8833-.46666-.25-1.13333-.8667-.01666-.8834 1.05-.0166 1.8.9667 2.05 1.3667 1.19997 2.0167 3.11667 1.45 3.88337 1.1.1166-.8667.4666-1.45.85-1.7833-2.9667-.3334-6.06671-1.4834-6.06671-6.5834 0-1.45.51667-2.65 1.36667-3.5833-.13333-.3333-.6-1.7.13333-3.53332 0 0 1.11671-.35 3.66671 1.36667 1.0666-.3 2.2-.45 3.3333-.45 1.1333 0 2.2667.15 3.3333.45 2.55-1.73333 3.6667-1.36667 3.6667-1.36667.7333 1.83332.2667 3.20002.1333 3.53332.85.9333 1.3667 2.1167 1.3667 3.5833 0 5.1167-3.1167 6.25-6.0833 6.5834.4833.4166.9 1.2166.9 2.4666 0 1.7834-.0167 3.2167-.0167 3.6667 0 .35.25.7667.9167.6333 2.6469-.8935 4.9469-2.5947 6.5764-4.8639a13.35537 13.35537 0 0 0 2.5069-7.7861c0-7.36662-5.9667-13.33328-13.3333-13.33328Z" fill="currentColor"></path>
-                            </svg>
-                        </a>
-                        <a target="_blank" class="SocialMediaLink" href="#">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <title>Youtube</title>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M26.3893 7.2201c1.1468.30808 2.054 1.21524 2.362 2.362.5649 2.0881.582 6.4185.582 6.4185s0 4.3474-.5648 6.4185c-.3081 1.1467-1.2153 2.0539-2.362 2.362-2.0711.5648-10.4065.5648-10.4065.5648s-8.33552 0-10.40654-.5648c-1.14678-.3081-2.05392-1.2153-2.36201-2.362-.56482-2.0882-.56482-6.4185-.56482-6.4185s0-4.3304.54771-6.40138c.30808-1.14677 1.21523-2.05391 2.362-2.362 2.07103-.56483 10.40646-.58195 10.40646-.58195s8.3355 0 10.4065.56483Zm-6.1446 8.7805-6.9148 4.0051v-8.0102l6.9148 4.0051Z" fill="currentColor"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <p>© 2024 Apollo Graph Inc., d/b/a Apollo GraphQL.</p>
+                    </a>
                 </div>
             </div>
         </div>
-    </footer>
-    <div>
-        <div class="MobileMenuContainer" id="MobileMenu" data-state="closed">
-            <div class="SerachFieldWrapper">
-                <div class="MobileMenuSearchField">
-                    <div class="MobileSearchIcon">
-                        <svg class="aa-SubmitIcon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                            <path d="M16.041 15.856c-0.034 0.026-0.067 0.055-0.099 0.087s-0.060 0.064-0.087 0.099c-1.258 1.213-2.969 1.958-4.855 1.958-1.933 0-3.682-0.782-4.95-2.050s-2.050-3.017-2.050-4.95 0.782-3.682 2.050-4.95 3.017-2.050 4.95-2.050 3.682 0.782 4.95 2.050 2.050 3.017 2.050 4.95c0 1.886-0.745 3.597-1.959 4.856zM21.707 20.293l-3.675-3.675c1.231-1.54 1.968-3.493 1.968-5.618 0-2.485-1.008-4.736-2.636-6.364s-3.879-2.636-6.364-2.636-4.736 1.008-6.364 2.636-2.636 3.879-2.636 6.364 1.008 4.736 2.636 6.364 3.879 2.636 6.364 2.636c2.125 0 4.078-0.737 5.618-1.968l3.675 3.675c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z"></path>
-                        </svg>
-                    </div>
-                    <input type="text" placeholder="What do you want to learn about GraphQL?">
-                </div>
-            </div>
-            <div class="MobileMenuWrapper">
-                <ul class="MobileNavList mb-0 ps-0">
-                    <li class="MobileNavItem">
-                        <button class="MobileNavBtn" type="button" data-state="closed" aria-expanded="false" aria-controls="FirstItemMobile">Product
-                            <svg width="112" height="112" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg" class="MobileNavArrow">
-                                <path d="M27.9997 56H86.333m0 0-28-28m28 28-28 28" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </button>
-                        <div id="FirstItemMobile" class="MobileNavDropDown" data-state="closed">
-                            <div class="DropDownWrapper">
-                                <a class="paragraph" aria-label="Go to GraphOS page" href="#"> GraphOS</a>
-                                <a class="paragraph" aria-label="Go to Apollo Federation page" href="#"> Apollo Federation</a>
-                                <a class="paragraph" aria-label="Go to Apollo Client page" href="#"> Apollo Client</a>
-                                <a class="paragraph" aria-label="Go to Apollo Server page" href="#"> Apollo Server</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="MobileNavItem">
-                        <a aria-label="Pricing" href="#">Pricing</a>
-                    </li>
-                    <li class="MobileNavItem">
-                        <button class="MobileNavBtn" type="button" data-state="closed" aria-expanded="false" aria-controls="SecondItemMobile">Developers
-                            <svg width="112" height="112" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg" class="MobileNavArrow">
-                                <path d="M27.9997 56H86.333m0 0-28-28m28 28-28 28" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </button>
-                        <div id="SecondItemMobile" class="MobileNavDropDown" data-state="closed">
-                            <div class="DropDownWrapper">
-                                <a class="paragraph" aria-label="Go to GraphOS page" href="#"> GraphOS</a>
-                                <a class="paragraph" aria-label="Go to Apollo Federation page" href="#"> Apollo Federation</a>
-                                <a class="paragraph" aria-label="Go to Apollo Client page" href="#"> Apollo Client</a>
-                                <a class="paragraph" aria-label="Go to Apollo Server page" href="#"> Apollo Server</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="MobileNavItem">
-                        <button class="MobileNavBtn" type="button" data-state="closed" aria-expanded="false" aria-controls="ThirdItemMobile">Enterprise
-                            <svg width="112" height="112" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg" class="MobileNavArrow">
-                                <path d="M27.9997 56H86.333m0 0-28-28m28 28-28 28" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </button>
-                        <div id="ThirdItemMobile" class="MobileNavDropDown" data-state="closed">
-                            <div class="DropDownWrapper">
-                                <a class="paragraph" aria-label="Go to GraphOS page" href="#"> GraphOS</a>
-                                <a class="paragraph" aria-label="Go to Apollo Federation page" href="#"> Apollo Federation</a>
-                                <a class="paragraph" aria-label="Go to Apollo Client page" href="#"> Apollo Client</a>
-                                <a class="paragraph" aria-label="Go to Apollo Server page" href="#"> Apollo Server</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="MobileNavItem">
-                        <button class="MobileNavBtn" type="button" data-state="closed" aria-expanded="false" aria-controls="FourthItemMobile">Company
-                            <svg width="112" height="112" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg" class="MobileNavArrow">
-                                <path d="M27.9997 56H86.333m0 0-28-28m28 28-28 28" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </button>
-                        <div id="FourthItemMobile" class="MobileNavDropDown" data-state="closed">
-                            <div class="DropDownWrapper">
-                                <a class="paragraph" aria-label="Go to GraphOS page" href="#"> GraphOS</a>
-                                <a class="paragraph" aria-label="Go to Apollo Federation page" href="#"> Apollo Federation</a>
-                                <a class="paragraph" aria-label="Go to Apollo Client page" href="#"> Apollo Client</a>
-                                <a class="paragraph" aria-label="Go to Apollo Server page" href="#"> Apollo Server</a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="MobileMenuButtons">
-                <a href="#" class="LightBtn MainBtn">
-                    <div class="button_content__1EzBW">
-                        <span class="">Contact Sales</span>
-                    </div>
-                </a>
-                <a href="#" class="MainBtn Black">
-                    <div class="button_content__1EzBW">
-                        <span class="">Start for Free</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <script src="vendors/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="vendors/jQuery-3.7.1/jQuery.js"></script>
-    <script src="scripts.js"></script>
-</body>
+        <script src="vendors/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+        <script src="vendors/jQuery-3.7.1/jQuery.js"></script>
+        <script src="scripts.js"></script>
+    </body>
 </html>
