@@ -2644,6 +2644,7 @@ button[data-rmiz-btn-open] {
     right: 0;
 }
 
+
 @media (hover: hover) and (pointer: fine) {
     .SingleArticleCard:hover {
         -webkit-transform: translateY(-1%);
@@ -2662,7 +2663,7 @@ button[data-rmiz-btn-open] {
 @media (min-width: 1350px) {
     .FooterLogoWrapper {
         position: absolute;
-        left: calc(clamp(24px,2.5vw,48px) + clamp(7.5px, 1.5625vw, 30px));
+        left: calc(var(--side-space) + clamp(7.5px, 1.5625vw, 30px));
     }
 }
 
@@ -2685,7 +2686,7 @@ button[data-rmiz-btn-open] {
     .DropDownContent a {
         padding:0 clamp(16px,.8333333333vw,16px);
         height: clamp(64px,3.3333333333vw,64px);
-        border-radius: clamp(16px,0.8333333333vw,16px)
+        border-radius: var(--gap16)
     }
 
     .DropDownContent a:focus,.DropDownContent a:hover {
@@ -2703,8 +2704,8 @@ button[data-rmiz-btn-open] {
     }
 
     .ArticleLink{
-        border-top-left-radius: clamp(32px,1.6666666667vw,32px);
-        border-top-right-radius: clamp(32px,1.6666666667vw,32px);
+        border-top-left-radius: var(--border-radius-32);
+        border-top-right-radius: var(--border-radius-32);
     }
 
     .CardContent{
@@ -2741,6 +2742,23 @@ button[data-rmiz-btn-open] {
 
     .SinglePostArticle{
         margin-left: calc((var(--sitemap-width) + var(--gap))* -1);
+    }
+
+    .VideoCard{
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .VideoCardText.Mobile{
+        display: none;
+    }
+
+    .GetStartedLinkWrapper{
+        width: -webkit-max-content;
+        width: max-content;
+        background-color: var(--color-grey-light);
+        margin-left: clamp(16px, 3.75vw, 72px);
+        padding: clamp(24px, 1.25vw, 24px) clamp(40px, 2.0833333333vw, 40px)
     }
 }
 
@@ -2815,7 +2833,7 @@ button[data-rmiz-btn-open] {
     .PaginationButton{
         width: clamp(74px, 3.8541666667vw, 74px);
         height: clamp(74px, 3.8541666667vw, 74px);
-        border-radius: clamp(16px,0.8333333333vw,16px);
+        border-radius: var(--gap16);
         border: clamp(1px, .0520833333vw, 1px) solid var(--color);
     }
 
@@ -2828,8 +2846,8 @@ button[data-rmiz-btn-open] {
     .FooterCopyrightContainer{
         align-items: flex-start;
         flex-direction: column;
-        margin-left: clamp(24px,2.5vw,48px);
-        margin-right: clamp(24px,2.5vw,48px);
+        margin-left: var(--side-space);
+        margin-right: var(--side-space);
     }
 
     .SocialMediaLink{
@@ -2840,14 +2858,14 @@ button[data-rmiz-btn-open] {
     .FooterNavigationWrapper{
         justify-content: space-between;
         align-items: flex-start;
-        margin-left: clamp(24px,2.5vw,48px);
-        margin-right: clamp(24px,2.5vw,48px);
+        margin-left: var(--side-space);
+        margin-right: var(--side-space);
     }
 
     .DropDownWrapper{
         display: flex;
         flex-direction: column;
-        gap: clamp(16px, .8333333333vw, 16px);
+        gap: var(--gap16);
     }
 
     .DropDownWrapper a{
@@ -2858,7 +2876,7 @@ button[data-rmiz-btn-open] {
     .SerachFieldWrapper{
         width: auto;
         height: 62px;
-        margin: 0 clamp(24px,2.5vw,48px);
+        margin: 0 var(--side-space);
     }
 /* 
     .CardContent{
@@ -2941,6 +2959,123 @@ button[data-rmiz-btn-open] {
     .SliderDots{
         display: flex;
     }
+
+    .HomepageHeroContent .Title{
+        font-size: clamp(54px, 10vw, 62px);
+        line-height: 0.95;
+        letter-spacing: -1px;
+    }
+
+    .HomepageHeroContent .Text{
+        font-size: clamp(18px, .9375vw, 18px);
+        line-height: normal;
+    }
+
+    .ButtonsWrapper .MainBtn{
+        line-height: 1.67;
+    }
+
+    .VideoCardText.Desktop{
+        display: none;
+    }
+
+    .SingleLineFeedbacks:not(:first-child){
+        display: none;
+    }
+
+    .FeedbackCardWrapper{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .SinglePillarSection{
+        padding-bottom: calc(clamp(42px, 11.6666666667vw, 224px) + var(--overlap, 0px));
+        padding-top: clamp(42px, 2.1875vw, 42px);
+    }
+
+    .SinglePillarContainer{
+        grid-template-columns: 100%;
+        grid-gap: clamp(42px, 2.1875vw, 42px);
+    }
+
+    .SinglePillarTextContainer{
+        gap: clamp(24px, 3.3333333333vw, 64px);
+    }
+
+    .SinglePillarTextWrapper{
+        padding-left: 0;
+        margin-top: clamp(18px, .9375vw, 18px);
+    }
+
+    .SinglePillarTextWrapper::before{
+        display: none;
+    }
+
+    .PillarsSection .Dots{
+        display: none;
+    }
+
+    .PillarsSection .Text > span:last-child{
+        font-size: clamp(18px, .9375vw, 18px);
+        line-height: 1.33;
+    }
+
+    .ContentCard{
+        padding-left: var(--side-space);
+        padding-right: var(--side-space);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-right: 0;
+        padding-bottom: clamp(100px, 5.2083333333vw, 100px);
+        margin-bottom: calc(var(--border-radius-32) * -2) !important;
+    }
+
+    .GetStartedWrapper{
+        grid-template-columns: auto;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        background-image: unset;
+    }
+
+    .GetStartedWrapper .MainBtn{
+        line-height: 1.67;
+        width: 100%;
+    }
+
+    .VideoCard{
+        padding: clamp(56px, 2.9166666667vw, 56px);
+        justify-content: center;
+        align-items: center;
+        min-height: clamp(450px, 23.4375vw, 450px);
+        height: 100%;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        z-index: 2;
+    }
+
+    .VideoCardWrapper{
+        max-width: 65%;
+        min-width: 500px;
+    }
+
+    .GetStartedLinkWrapper{
+        margin-top: clamp(48px, 2.5vw, 48px);
+    }
+
+    .HomepageHeroSection{
+        min-height: calc(65vh + clamp(32px, 1.6666666667vw, 32px));
+    }
+
+    .HomepageHeroContent .Title{
+        font-size: clamp(54px, 10vw, 62px);
+        line-height: .95;
+        letter-spacing: -1px;
+    }
+
+    .HomepageHeroContent .Text > span:last-child{
+        font-size: clamp(16px, .8375vw, 16px);
+        line-height: normal;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -2950,6 +3085,43 @@ button[data-rmiz-btn-open] {
 
     .Orbit{
         display: none;
+    }
+
+    .SingleLineFeedbacks .FeedbacksInnerWrapper:not(:first-child){
+        display: none;
+    }
+
+    .FeedbacksWrapper{
+        display: block;
+        width: 100%;
+    }
+
+    .SingleLineFeedbacks{
+        display: block;
+        overflow: unset;
+    }
+
+    .FeedbacksInnerWrapper{
+        height: 100%;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
+        transition-property: transform;
+        transition-duration: var(--duration-main);
+        transition-timing-function: var(--ease-galactic-out);
+        will-change: transform;
+        gap: clamp(24px, 1.25vw, 24px);
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 0 clamp(24px, 1.25vw, 24px);
+        animation: none;
+        cursor: grab;
+    }
+
+    .FeedbackCard{
+        height: auto;
+        padding: clamp(72px, 3.75vw, 72px);
+        flex-shrink: 0;
+        width: 80%;
     }
 }
 
@@ -2962,11 +3134,11 @@ button[data-rmiz-btn-open] {
 
 @media (max-width: 767px) {
     .Wrapper{
-        padding: clamp(16px,0.8333333333vw,16px);
+        padding: var(--gap16);
     }
 
     .MainArticlesCard{
-        border-radius: clamp(16px,0.8333333333vw,16px);
+        border-radius: var(--gap16);
     }
 
     .FooterLogoWrapper{
@@ -2974,7 +3146,7 @@ button[data-rmiz-btn-open] {
     }
 
     .ArchiveArticlesWrapper{
-        padding: clamp(16px,0.8333333333vw,16px);
+        padding: var(--gap16);
     }
 
     .FooterNavigationDesktop {
@@ -2986,8 +3158,8 @@ button[data-rmiz-btn-open] {
 
     .FooterNavigationWrapper{
         flex-direction: column;
-        margin-left: clamp(16px,0.8333333333vw,16px);
-        margin-right: clamp(16px,0.8333333333vw,16px);
+        margin-left: var(--gap16);
+        margin-right: var(--gap16);
     }
 
     .FooterLogoMobile{
@@ -2996,7 +3168,15 @@ button[data-rmiz-btn-open] {
 
 
     .FooterCopyrightContainer{
-        margin-left: clamp(16px,0.8333333333vw,16px);
-        margin-right: clamp(16px,0.8333333333vw,16px);
+        margin-left: var(--gap16);
+        margin-right: var(--gap16);
+    }
+
+    .HeroImageDesktop{
+        display: none;
+    }
+
+    .HeroImageMobile{
+        display: block;
     }
 }
