@@ -32,6 +32,11 @@ jQuery(document).ready(function() {
         });
     }
 
+    function OpenCloseModal() {
+        let Modal = jQuery(".VideoModal");
+        Modal.toggleClass("opened")
+    }
+
     jQuery(".DropDownBtn").hover(function(){
         OpenMenu(jQuery(this))
     });
@@ -87,11 +92,57 @@ jQuery(document).ready(function() {
             "transition-duration": "300ms",
             transform: `scale(${Scale}) translate(0px, ${TranslateY}px)`,
         });
-        
+
         jQuery(window).on("scroll", ImageZoomOut);
     });
 
     jQuery(".ArticleBannerModal button").on("click", ImageZoomOut);
+
+    jQuery(function() {
+        function initializeSlider() {
+            let slideWidth = $('.SingleSlide').outerWidth(true);
+            let maxLeft = -(slideWidth * ($('.SingleSlide').length - 1));
+
+            function updateDots(activeIndex) {
+                $('.SliderSingleDot').removeClass('ActiveDot');
+                $('.SliderSingleDot').eq(activeIndex).addClass('ActiveDot');
+            }
+
+            function moveSlides(newLeft, index) {
+                $('#Slider').stop(true, true).animate({ left: newLeft });
+                updateDots(index);
+            }
+
+            $("#Slider").draggable({
+                axis: "x",
+                stop: function(event, ui) {
+                    let newLeft = Math.round(ui.position.left / slideWidth) * slideWidth;
+
+                    if (newLeft > 0) {
+                        newLeft = 0;
+                    } else if (newLeft < maxLeft) {
+                        newLeft = maxLeft;
+                    }
+        
+                    let activeIndex = Math.abs(newLeft / slideWidth);
+                    moveSlides(newLeft, activeIndex);
+                }
+            });
+
+            $('.SliderSingleDot').on('click', function() {
+                let index = $(this).index();
+                let newLeft = -index * slideWidth;
+                console.log(newLeft);
+                moveSlides(newLeft, index);
+            });
+        };
+
+        initializeSlider();
+
+        $(window).resize(function() {
+            initializeSlider();
+        });
+    });
 
     jQuery(".AnimatedSlider").hover(
         function() {
@@ -101,4 +152,37 @@ jQuery(document).ready(function() {
             jQuery(this).css("--animation-status", "running");
         }
     );
+
+    const Feedbacks = jQuery("#Slider").find(".FeedbackCard");
+    const DotsContainer = jQuery(".FeedbackSliderDots");
+
+    for (let i = 0; i < Feedbacks.length; i++) {
+        DotsContainer.append('<button class="SliderSingleDot"><span></span></button>');
+    }
+
+    const FirstDot = jQuery(".SliderSingleDot")[0];
+    jQuery(FirstDot).addClass("ActiveDot");
+    
+    jQuery(".CloseBtn").on("click", function(){
+        OpenCloseModal();
+    });
+
+    jQuery(".OpenVideoModalBtn").on("click", function(){
+        OpenCloseModal();
+    });
+
+    const video = jQuery("#Video")[0];
+    const button = jQuery(".PlayVideoBtn");
+
+    jQuery(video).on('play', function() {
+        button.hide(); 
+      });
+    
+    jQuery(video).on('pause', function() {
+        button.show(); 
+    });
+
+    jQuery(button).on("click", function(){
+        video.paused ? video.play() : video.pause();
+    });
 })
